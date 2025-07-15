@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jun 18 19:47:16 2025
@@ -6,8 +5,6 @@ Created on Wed Jun 18 19:47:16 2025
 @author: zacha
 """
 
-=======
->>>>>>> da2764efb1924ee1e2029babea7ebe972929e157
 from biocrnpyler import *
 import bioscrape
 import numpy as np
