@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jul 15 12:56:54 2025
+Created on Sat Jul 19 18:54:54 2025
 
 @author: zacha
 """
@@ -8,61 +8,56 @@ Created on Tue Jul 15 12:56:54 2025
 from biocrnpyler import *
 import bioscrape
 import numpy as np
-import pylab as plt
+import matplotlib.pyplot as plt
 import pandas as pd
+from GCSim import GCSim
 
-#Parameters #!!! parameters mostly default currently #!!! add in degradation???
+#Parameters #!!! parameters mostly default currently #!!! add in degradation for complexes? try overall circuit? 
 
-hill_parameters = {"k":1.0, "n":4, "K":20, "kleak":.01}
+''' degredation and production for all componenets except IPTG and aTc'''
+
 complex_parameters = {'kb':1.0, 'ku':0.01}
 component_parameters = {
-    #Promoter LacI Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'binding', part_id = 'P_Tac_LacI', name = 'kb'):100, 
-    ParameterKey(mechanism = 'binding', part_id = "P_Tac_LacI", name = 'ku'):5.0, 
-    ParameterKey(mechanism = 'binding', part_id = "P_Tac_LacI", name = 'cooperativity'):4.0, 
+    #Defalt Promoter Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'binding', part_id = None, name = 'kb'):100, 
+    ParameterKey(mechanism = 'binding', part_id = None, name = 'ku'):5.0, 
+    ParameterKey(mechanism = 'binding', part_id = None, name = 'cooperativity'):4.0, 
     
-    #LacI Bound Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tac_LacI', name = 'kb'):1, 
-    ParameterKey(mechanism = 'transcription', part_id = "P_Tac_LacI", name = 'ku'):100, 
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tac_LacI', name = "ktx"): 1, 
-    
-    #Promoter TetR Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'binding', part_id = 'P_Tet_TetR', name = 'kb'):100,
-    ParameterKey(mechanism = 'binding', part_id = "P_Tet_TetR", name = 'ku'):5.0,
-    ParameterKey(mechanism = 'binding', part_id = "P_Tet_TetR", name = 'cooperativity'):4.0,
-    
-    #TetR Bound Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tet_TetR', name = 'kb'):1,
-    ParameterKey(mechanism = 'transcription', part_id = "P_Tet_TetR", name = 'ku'):100,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tet_TetR', name = "ktx"): 1, 
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription', part_id = None, name = 'kb'):1, 
+    ParameterKey(mechanism = 'transcription', part_id = None, name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription', part_id = None, name = "ktx"): 0.0001, 
     
     #Leak Parameters for transcription
     #These regulate expression of an unbound promoter
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tac_leak', name = "kb"): 2,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tac_leak', name = "ku"): 10,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tac_leak', name = "ktx"): 1.0, 
+    ParameterKey(mechanism = 'transcription', part_id = 'P_Tac_leak', name = "kb"): 10,
+    ParameterKey(mechanism = 'transcription', part_id = 'P_Tac_leak', name = "ku"): 2,
+    ParameterKey(mechanism = 'transcription', part_id = 'P_Tac_leak', name = "ktx"): 0.001,
     
-    #Leak Parameters for transcription
-    #These regulate expression of an unbound promoter
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tet_leak', name = "kb"): 2,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tet_leak', name = "ku"): 10,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_Tet_leak', name = "ktx"): 1.0
+    ParameterKey(mechanism = 'transcription', part_id = 'P_Tet_leak', name = "kb"): 10,
+    ParameterKey(mechanism = 'transcription', part_id = 'P_Tet_leak', name = "ku"): 2,
+    ParameterKey(mechanism = 'transcription', part_id = 'P_Tet_leak', name = "ktx"): 0.001
+    
 }
 
 
 #Species
 
-IPTG = Species('IPTG') #Input A
-LacI = Species('LacI')
+protease = Species('protease')
+
+IPTG = Species('IPTG', attributes=['input']) #Input A
+LacI = Species('LacI', attributes=['repressor'])
 IPTG_LacI = ChemicalComplex([IPTG, IPTG, LacI, LacI], parameters = complex_parameters)
 
-aTc = Species('aTc') #Input B
-TetR = Species('TetR')
+aTc = Species('aTc', attributes=['input']) #Input B
+TetR = Species('TetR', attributes=['repressor'])
 aTc_TetR = ChemicalComplex([aTc, aTc, TetR, TetR], parameters = complex_parameters)
 
 rbs = RBS('UTR1')
-CDS_SrpR = CDS('SrpR', 'SrpR')
+CDS_SrpR = CDS('CDS_SrpR', 'SrpR')
 t16 = Terminator('t16')
+
+CDS_SrpR.protein = Species('SrpR', attributes=['degtagged'])
 
 #Promoters
 
@@ -71,40 +66,44 @@ P_Tac = RegulatedPromoter('P_Tac',  regulators = [LacI], leak=True,
 P_Tet = RegulatedPromoter('P_Tet', regulators = [TetR], leak=True, 
                           parameters = component_parameters)
 
-#DNAassemblies
+#DNA_constructs
 
-parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.2, "kdeg":2,"kint":.05}
-SrpR_construct = DNA_construct([P_Tac, P_Tet, rbs, CDS_SrpR, t16], mechanisms = 
-                               {"transcription":Transcription_MM(Species("RNAP",material_type="protein")), 
-                                "translation":Translation_MM(Species("Ribo",material_type="protein")), 
-                                "binding":One_Step_Cooperative_Binding()},parameters=parameters)
+parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.2, "kdeg":2, "kint":.05, 'kdil':0.0075}
+mechanisms = {"transcription":Transcription_MM(Species("RNAP",material_type="protein", attributes=['machinery'])), 
+              "translation":Translation_MM(Species("Ribo",material_type="protein", attributes=['machinery'])), 
+              "binding":One_Step_Cooperative_Binding()}
+SrpR_construct = DNA_construct([P_Tac, P_Tet, rbs, CDS_SrpR, t16], mechanisms=mechanisms)
 
-M = TxTlExtract(name="txtl", parameters = parameters, 
-                      components=[SrpR_construct, IPTG_LacI, aTc_TetR])
+# dilution_mechanism = Dilution(filter_dict = {"input":False, "machinery":False}, default_on = True)
+
+# global_mechanisms = {"dilution":dilution_mechanism}
+
+degredation_mechanism = Deg_Tagged_Degredation(protease)
+
+global_mechanisms = {"degredation":degredation_mechanism}
+
+M = TxTlExtract(name="txtl", parameters = parameters, global_mechanisms=global_mechanisms, 
+                components=[SrpR_construct, IPTG_LacI, aTc_TetR])
+
 CRN = M.compile_crn()
-
-CRN.write_sbml_file('0000000.xml') #saving CRN as sbml
-
 print(CRN.pretty_print(show_rates = True, show_keys = True))
 
-plt.figure(figsize = (6, 6))
-N = 11 #Number of titrations
-max_titration = 10
-HM = np.zeros((N, N))
-for a_ind, A_c in enumerate(np.linspace(0, max_titration, N)):
-    for b_ind, B_c in enumerate(np.linspace(0, max_titration, N)):
-        x0 = {SrpR_construct.get_species():5, IPTG:A_c, aTc:B_c, LacI:10, TetR:10, 
-              "protein_RNAP":10., "protein_Ribo":50., 'protein_RNAase':10}
-        timepoints = np.linspace(0, 1000, 1000)
-        R1 = CRN.simulate_with_bioscrape_via_sbml(timepoints, initial_condition_dict = x0)
-        HM[a_ind, b_ind] = R1['protein_SrpR'][len(timepoints)-1]
-plt.title("")
-cb = plt.pcolor(HM)
-plt.colorbar(cb)
-plt.xlabel("aTc")
-plt.ylabel("IPTG")
+num_val = 5
+max_conc = 10
+x0 = {"protein_RNAP_machinery":5, "protein_Ribo_machinery":50., 'protein_RNAase':100, 
+      SrpR_construct.get_species():5, LacI:10, TetR:10, protease:0.01}
+timepoints = np.linspace(0, 1000, 1000)
 
-plt.xticks(np.arange(.5, N+.5, 1), [str(i) for i in np.linspace(0, max_titration, N)])
-plt.yticks(np.arange(.5, N+.5, 1), [str(i) for i in np.linspace(0, max_titration, N)])
-    
-plt.show()
+sim = GCSim(CRN)
+
+sim.heatmap(x0, timepoints, max_conc, num_val, IPTG, aTc,'SrpR_degtagged', title = 'SrpR Gate Output', 
+            xlabel = 'aTc', ylabel = 'IPTG')
+
+sim.inputswitch(x0, 1000, 'SrpR_degtagged', IPTG, aTc, 10, LacI, TetR, IPTG_LacI, aTc_TetR)
+
+for a in [0, 10]:
+    for b in [0, 10]:
+        x0 = {SrpR_construct.get_species():5, LacI:10, TetR:10, IPTG:a, aTc:b, protease:0.01,
+              "protein_RNAP_machinery":5., "protein_Ribo_machinery":50., 'protein_RNAase':100}
+        timepoints = np.linspace(0, 1000, 1000)
+        R = sim.basicsim(x0, timepoints, 'SrpR_degtagged', title = f'IPTG = {a}, aTc = {b}')
