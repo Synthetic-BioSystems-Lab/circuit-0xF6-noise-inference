@@ -17,37 +17,32 @@ hill_parameters = {"k":1.0, "n":4, "K":20, "kleak":.01}
 complex_parameters = {'kb':100, 'ku':1.0}
 parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.2, "kdeg":2,"kint":.05}
 component_parameters = {
-    #Promoter AraAraC Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'binding', part_id = 'P_BAD_AraAraC', name = 'kb'):100, 
-    ParameterKey(mechanism = 'binding', part_id = "P_BAD_AraAraC", name = 'ku'):5.0, 
-    ParameterKey(mechanism = 'binding', part_id = "P_BAD_AraAraC", name = 'cooperativity'):4.0, 
+    #Defalt Promoter Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'kb'):100, 
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'ku'):10, 
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2.0, 
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):1, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = "ktx"): 0.05,
     
     #AraAraC Bound Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'transcription', part_id = 'P_BAD_AraAraC', name = 'kb'):10, 
-    ParameterKey(mechanism = 'transcription', part_id = "P_BAD_AraAraC", name = 'ku'):1, 
-    ParameterKey(mechanism = 'transcription', part_id = 'P_BAD_AraAraC', name = "ktx"): 1,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_Ara_2x_AraC_2x', name = 'kb'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = "P_BAD_Ara_2x_AraC_2x", name = 'ku'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_Ara_2x_AraC_2x', name = "ktx"): 0.05,
     
-    #Leak Parameters for transcription
+    #P_BAD Leak Parameters for transcription
     #These regulate expression of an unbound promoter
-    ParameterKey(mechanism = 'transcription', part_id = 'P_AraAraC_Leak', name = "kb"): 2,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_AraAraC_Leak', name = "ku"): 10,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_AraAraC_Leak', name = "ktx"): 1.0,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "kb"): 1,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "ku"): 100,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "ktx"): 0.05,
     
-    #Promoter AmtR Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'binding', part_id = 'P_AmtR_AmtR', name = 'kb'):100,
-    ParameterKey(mechanism = 'binding', part_id = "P_AmtR_AmtR", name = 'ku'):5.0,
-    ParameterKey(mechanism = 'binding', part_id = "P_AmtR_AmtR", name = 'cooperativity'):4.0,
-    
-    #AmtR Bound Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'transcription', part_id = 'P_AmtR_AmtR', name = 'kb'):1,
-    ParameterKey(mechanism = 'transcription', part_id = "P_AmtR_AmtR", name = 'ku'):10,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_AmtR_AmtR', name = "ktx"):1, 
-    
-    #Leak Parameters for transcription
+    #AmtR Leak Parameters for transcription
     #These regulate expression of an unbound promoter
-    ParameterKey(mechanism = 'transcription', part_id = 'P_AmtR_Leak', name = "kb"): 2,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_AmtR_Leak', name = "ku"): 10,
-    ParameterKey(mechanism = 'transcription', part_id = 'P_AmtR_Leak', name = "ktx"):1.0 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_AmtR_leak', name = "kb"): 100,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_AmtR_leak', name = "ku"): 10,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_AmtR_leak', name = "ktx"):0.05 
 }
 
 
@@ -68,10 +63,10 @@ t16 = Terminator('t16')
 #Promoters
 
 P_BAD = RegulatedPromoter('P_BAD', regulators = [AraAraC], leak=False,
-                          parameters = complex_parameters)
+                          parameters = component_parameters)
 
 P_AmtR = RegulatedPromoter('P_AmtR', regulators = [AmtR], leak=True, 
-                          parameters = complex_parameters)
+                          parameters = component_parameters)
 
 #DNA_constructs
 mechanisms = {"transcription":Transcription_MM(Species("RNAP",material_type="protein")), 
@@ -89,7 +84,7 @@ M = TxTlExtract(name='TxTl', parameters=parameters,
                       components=[AmtR_construct, YFP_construct, AraAraC])
 
 CRN = M.compile_crn()
-CRN.write_sbml_file('Ara_Signal_Inverter_sbml.xml') #saving CRN as sbml
+# CRN.write_sbml_file('Ara_Signal_Inverter_sbml.xml') #saving CRN as sbml
 
 print(CRN.pretty_print(show_rates = True, show_keys = True))
 
@@ -106,6 +101,3 @@ plt.ylabel('[YFP]')
 plt.xlabel('Time')
 plt.legend()
 plt.show()
-
-for mech_type, mech in M.mechanisms.items():
-    print(f"{mech_type}: {mech}")

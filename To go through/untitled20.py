@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jul 19 18:54:54 2025
+Created on Sat Aug  9 18:32:11 2025
 
 @author: zacha
 """
@@ -20,23 +20,23 @@ complex_parameters = {'kb':1.0, 'ku':0.01}
 component_parameters = {
     #Defalt Promoter Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'kb'):100, 
-    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'ku'):5.0, 
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'ku'):10, 
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2.0,  
     
     #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):1, 
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'ku'):100, 
-    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = "ktx"): 1, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = "ktx"): 0.05, 
     
     #Leak Parameters for transcription
     #These regulate expression of an unbound promoter
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tac_leak', name = "kb"): 100,
-    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tac_leak', name = "ku"): 0.001,
-    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tac_leak', name = "ktx"): 1,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tac_leak', name = "ku"): 10,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tac_leak', name = "ktx"): 0.05,
     
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tet_leak', name = "kb"): 100,
-    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tet_leak', name = "ku"): 0.001,
-    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tet_leak', name = "ktx"): 1
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tet_leak', name = "ku"): 10,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tet_leak', name = "ktx"): 0.05
     
 }
 
@@ -68,7 +68,7 @@ P_Tet = RegulatedPromoter('P_Tet', regulators = [TetR], leak=True,
 
 #DNA_constructs
 
-parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.2, "kdeg":2, "kint":.05, 'kdil':0.0075}
+parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.05, "kdeg":0.0075, "kint":.05, 'kdil':0.0075}
 mechanisms = {"transcription":Transcription_MM(Species("RNAP",material_type="protein", attributes=['machinery'])), 
               "translation":Translation_MM(Species("Ribo",material_type="protein", attributes=['machinery'])), 
               "binding":One_Step_Cooperative_Binding()}

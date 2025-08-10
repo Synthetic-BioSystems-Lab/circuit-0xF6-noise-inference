@@ -1,7 +1,7 @@
 mechanism_id	part_id	param_name	param_val	comments
-	e coli	Ribo	150	uM assuming ~100000 Ribosomes / e. coli with a volume 1 um^3
-	e coli	RNAP	15	uM assuming ~10000 RNAP molecules / e. coli with a volume 1 um^3
-	e coli	RNAase	45	uM assuming ~30000 RNAP molecules / e. coli with a volume 1 um^4
+	e coli	protein_Ribo	150	uM assuming ~100000 Ribosomes / e. coli with a volume 1 um^3
+	e coli	protein_RNAP	15	uM assuming ~10000 RNAP molecules / e. coli with a volume 1 um^3
+	e coli	protein_RNAase	45	uM assuming ~30000 RNAP molecules / e. coli with a volume 1 um^4
 	e coli	cellular_processes	5	somewhat arbitary concentration for ~3000 genes in e. coli assuming weak loading on all of them
 	e coli extract	protein_Ribo	24	1/5 th the Ribosome concentration of E. Coli
 	e coli extract	protein_RNAP	3	1/5 th the rnap concentration of E. Coli
@@ -58,3 +58,4 @@ simple_transcription	strong	ktx	0.4775625	Above rescaled by ktx for simple trans
 	combinatorial_promoter_leak	kexpress	0.0028125	1% of kexpress default
 	regulated_promoter_leak	ktx	0.0005	1% of ktx default
 	regulated_promoter_leak	kexpress	0.0028125	1% of kexpress default
+deg_tagged_degredation		kdeg	0.0075

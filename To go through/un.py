@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jul 19 18:54:54 2025
+Created on Wed Aug  6 20:25:08 2025
 
 @author: zacha
 """
@@ -16,6 +16,7 @@ from GCSim import GCSim
 
 ''' degredation and production for all componenets except IPTG and aTc'''
 
+hill_parameters = {"k":1.0, "n":4, "K":20, "kleak":.01}
 complex_parameters = {'kb':1.0, 'ku':0.01}
 component_parameters = {
     #Defalt Promoter Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
@@ -61,18 +62,18 @@ CDS_SrpR.protein = Species('SrpR', attributes=['degtagged'])
 
 #Promoters
 
-P_Tac = RegulatedPromoter('P_Tac',  regulators = [LacI], leak=True, 
-                          parameters = component_parameters)
-P_Tet = RegulatedPromoter('P_Tet', regulators = [TetR], leak=True, 
-                          parameters = component_parameters)
+P_Tac = RepressiblePromoter('P_Tac', repressor = LacI, leak= False, 
+                            parameters = hill_parameters)
+P_Tet = RepressiblePromoter('P_Tet', repressor = TetR, leak= False,
+                            parameters = hill_parameters)
 
 #DNA_constructs
 
 parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.2, "kdeg":2, "kint":.05, 'kdil':0.0075}
-mechanisms = {"transcription":Transcription_MM(Species("RNAP",material_type="protein", attributes=['machinery'])), 
-              "translation":Translation_MM(Species("Ribo",material_type="protein", attributes=['machinery'])), 
-              "binding":One_Step_Cooperative_Binding()}
-SrpR_construct = DNA_construct([P_Tac, P_Tet, rbs, CDS_SrpR, t16], mechanisms=mechanisms)
+
+SrpR_assembly1 = DNAassembly("SrpR_assembly", promoter=P_Tac, rbs="medium", protein='SrpR')
+
+
 
 # dilution_mechanism = Dilution(filter_dict = {"input":False, "machinery":False}, default_on = True)
 
@@ -82,7 +83,7 @@ degredation_mechanism = Deg_Tagged_Degredation(protease)
 
 global_mechanisms = {"degredation":degredation_mechanism}
 
-M = TxTlExtract(name="txtl", parameters = parameters, global_mechanisms=global_mechanisms, 
+M = SimpleTxTlExtract(name="txtl", parameters = parameters, global_mechanisms=global_mechanisms, 
                 components=[SrpR_construct, IPTG_LacI, aTc_TetR])
 
 CRN = M.compile_crn()
@@ -90,8 +91,7 @@ print(CRN.pretty_print(show_rates = True, show_keys = True))
 
 num_val = 5
 max_conc = 10
-x0 = {"protein_RNAP_machinery":5, "protein_Ribo_machinery":50., 'protein_RNAase':100, 
-      SrpR_construct.get_species():5, LacI:10, TetR:10, protease:1}
+x0 = {SrpR_construct.get_species():5, LacI:10, TetR:10, protease:7}
 timepoints = np.linspace(0, 1000, 1000)
 
 sim = GCSim(CRN)
@@ -101,9 +101,8 @@ sim.heatmap(x0, timepoints, max_conc, num_val, IPTG, aTc,'SrpR_degtagged', title
 
 sim.inputswitch(x0, 5000, 'SrpR_degtagged', IPTG, aTc, 10, LacI, TetR, IPTG_LacI, aTc_TetR)
 
-for a in [0, 10]:
-    for b in [0, 10]:
-        x0 = {SrpR_construct.get_species():5, LacI:10, TetR:10, IPTG:a, aTc:b, protease:1,
-              "protein_RNAP_machinery":5., "protein_Ribo_machinery":50., 'protein_RNAase':100}
+for a in [0, 100]:
+    for b in [0, 100]:
+        x0 = {SrpR_construct.get_species():5, LacI:100, TetR:100, IPTG:a, aTc:b, protease:7}
         timepoints = np.linspace(0, 5000, 1000)
         R = sim.basicsim(x0, timepoints, ['SrpR_degtagged'], title = f'IPTG = {a}, aTc = {b}')

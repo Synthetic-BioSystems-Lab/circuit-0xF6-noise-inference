@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
-  <model id="biocrnpyler_741640" name="biocrnpyler_741640" substanceUnits="mole" timeUnits="second" volumeUnits="litre" areaUnits="square_metre" lengthUnits="metre" extentUnits="mole">
+  <model id="biocrnpyler_366587" name="biocrnpyler_366587" substanceUnits="mole" timeUnits="second" volumeUnits="litre" areaUnits="square_metre" lengthUnits="metre" extentUnits="mole">
     <listOfUnitDefinitions>
       <unitDefinition id="square_metre">
         <listOfUnits>
@@ -23,7 +23,7 @@
       <species id="complex_TetR_2x_dna_SrpR_assembly_" name="TetR_2x_dna_SrpR_assembly" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="complex_complex_TetR_2x_dna_SrpR_assembly__protein_RNAP_" name="complex_TetR_2x_dna_SrpR_assembly__protein_RNAP" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_Ribo" name="Ribo" compartment="default" initialConcentration="24" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="SrpR" name="SrpR" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="SrpR_degtagged" name="SrpR" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="complex_protein_Ribo_rna_SrpR_assembly_" name="protein_Ribo_rna_SrpR_assembly" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="IPTG" name="IPTG" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="complex_IPTG_2x_LacI_2x_" name="IPTG_2x_LacI_2x" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
@@ -32,25 +32,30 @@
       <species id="protein_RNAase" name="RNAase" compartment="default" initialConcentration="6" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="complex_protein_RNAase_rna_SrpR_assembly_" name="protein_RNAase_rna_SrpR_assembly" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="complex_complex_protein_Ribo_rna_SrpR_assembly__protein_RNAase_" name="complex_protein_Ribo_rna_SrpR_assembly__protein_RNAase" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protease" name="protease" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_SrpR_degtagged_protease_" name="SrpR_degtagged_protease" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
     </listOfSpecies>
     <listOfParameters>
-      <parameter id="kb_P_Tac_Tet_leak_transcription" value="2" constant="true"/>
+      <parameter id="kb_P_Tac_Tet_leak_transcription" value="100" constant="true"/>
       <parameter id="ku_P_Tac_Tet_leak_transcription" value="10" constant="true"/>
-      <parameter id="ktx_P_Tac_Tet_leak_transcription" value="1" constant="true"/>
+      <parameter id="ktx_P_Tac_Tet_leak_transcription" value="0.05" constant="true"/>
+      <parameter id="kb__one_step_cooperative_binding" value="100" constant="true"/>
+      <parameter id="ku__one_step_cooperative_binding" value="10" constant="true"/>
+      <parameter id="kb__transcription_mm" value="1" constant="true"/>
+      <parameter id="ku__transcription_mm" value="100" constant="true"/>
+      <parameter id="ktx__transcription_mm" value="0.05" constant="true"/>
       <parameter id="kb__" value="100" constant="true"/>
-      <parameter id="ku__" value="10" constant="true"/>
-      <parameter id="kb_P_Tac_Tet_LacI_transcription" value="1" constant="true"/>
-      <parameter id="ku_P_Tac_Tet_LacI_transcription" value="100" constant="true"/>
-      <parameter id="ktx_P_Tac_Tet_LacI_transcription" value="1" constant="true"/>
-      <parameter id="kb_P_Tac_Tet_TetR_transcription" value="1" constant="true"/>
-      <parameter id="ku_P_Tac_Tet_TetR_transcription" value="100" constant="true"/>
-      <parameter id="ktx_P_Tac_Tet_TetR_transcription" value="1" constant="true"/>
       <parameter id="ku_strong_" value="0.5" constant="true"/>
       <parameter id="ktl__" value="0.05" constant="true"/>
+      <parameter id="ku__" value="10" constant="true"/>
       <parameter id="kdeg__rna_degredation_mm" value="0.001" constant="true"/>
+      <parameter id="kdeg__deg_tagged_degredation" value="0.0075" constant="true"/>
     </listOfParameters>
     <listOfReactions>
       <reaction id="r0" name="r0" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_Tac_Tet_leak_transcription type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="dna_SrpR_assembly" stoichiometry="1" constant="false"/>
           <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
@@ -70,6 +75,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r0rev" name="r0rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_Tac_Tet_leak_transcription type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_dna_SrpR_assembly_protein_RNAP_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -88,6 +96,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r1" name="r1" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_Tac_Tet_leak_transcription type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_dna_SrpR_assembly_protein_RNAP_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -107,6 +118,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r2" name="r2" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="LacI" stoichiometry="2" constant="false"/>
           <speciesReference species="dna_SrpR_assembly" stoichiometry="1" constant="false"/>
@@ -118,7 +132,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> kb__ </ci>
+              <ci> kb__one_step_cooperative_binding </ci>
               <apply>
                 <power/>
                 <ci> LacI </ci>
@@ -130,6 +144,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r2rev" name="r2rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_LacI_2x_dna_SrpR_assembly_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -141,13 +158,16 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> ku__ </ci>
+              <ci> ku__one_step_cooperative_binding </ci>
               <ci> complex_LacI_2x_dna_SrpR_assembly_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction id="r3" name="r3" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription_mm type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_LacI_2x_dna_SrpR_assembly_" stoichiometry="1" constant="false"/>
           <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
@@ -159,7 +179,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> kb_P_Tac_Tet_LacI_transcription </ci>
+              <ci> kb__transcription_mm </ci>
               <ci> complex_LacI_2x_dna_SrpR_assembly_ </ci>
               <ci> protein_RNAP </ci>
             </apply>
@@ -167,6 +187,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r3rev" name="r3rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription_mm type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_complex_LacI_2x_dna_SrpR_assembly__protein_RNAP_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -178,13 +201,16 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> ku_P_Tac_Tet_LacI_transcription </ci>
+              <ci> ku__transcription_mm </ci>
               <ci> complex_complex_LacI_2x_dna_SrpR_assembly__protein_RNAP_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction id="r4" name="r4" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription_mm type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_complex_LacI_2x_dna_SrpR_assembly__protein_RNAP_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -197,13 +223,16 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> ktx_P_Tac_Tet_LacI_transcription </ci>
+              <ci> ktx__transcription_mm </ci>
               <ci> complex_complex_LacI_2x_dna_SrpR_assembly__protein_RNAP_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction id="r5" name="r5" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="TetR" stoichiometry="2" constant="false"/>
           <speciesReference species="dna_SrpR_assembly" stoichiometry="1" constant="false"/>
@@ -215,7 +244,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> kb__ </ci>
+              <ci> kb__one_step_cooperative_binding </ci>
               <apply>
                 <power/>
                 <ci> TetR </ci>
@@ -227,6 +256,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r5rev" name="r5rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_TetR_2x_dna_SrpR_assembly_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -238,13 +270,16 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> ku__ </ci>
+              <ci> ku__one_step_cooperative_binding </ci>
               <ci> complex_TetR_2x_dna_SrpR_assembly_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction id="r6" name="r6" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription_mm type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_TetR_2x_dna_SrpR_assembly_" stoichiometry="1" constant="false"/>
           <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
@@ -256,7 +291,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> kb_P_Tac_Tet_TetR_transcription </ci>
+              <ci> kb__transcription_mm </ci>
               <ci> complex_TetR_2x_dna_SrpR_assembly_ </ci>
               <ci> protein_RNAP </ci>
             </apply>
@@ -264,6 +299,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r6rev" name="r6rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription_mm type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_complex_TetR_2x_dna_SrpR_assembly__protein_RNAP_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -275,13 +313,16 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> ku_P_Tac_Tet_TetR_transcription </ci>
+              <ci> ku__transcription_mm </ci>
               <ci> complex_complex_TetR_2x_dna_SrpR_assembly__protein_RNAP_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction id="r7" name="r7" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription_mm type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_complex_TetR_2x_dna_SrpR_assembly__protein_RNAP_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -294,13 +335,16 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> ktx_P_Tac_Tet_TetR_transcription </ci>
+              <ci> ktx__transcription_mm </ci>
               <ci> complex_complex_TetR_2x_dna_SrpR_assembly__protein_RNAP_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction id="r8" name="r8" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="rna_SrpR_assembly" stoichiometry="1" constant="false"/>
           <speciesReference species="protein_Ribo" stoichiometry="1" constant="false"/>
@@ -320,6 +364,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r8rev" name="r8rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_strong_ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_protein_Ribo_rna_SrpR_assembly_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -338,12 +385,15 @@
         </kineticLaw>
       </reaction>
       <reaction id="r9" name="r9" reversible="false">
+        <annotation>
+          <PropensityType> k=ktl__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_protein_Ribo_rna_SrpR_assembly_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
           <speciesReference species="rna_SrpR_assembly" stoichiometry="1" constant="false"/>
-          <speciesReference species="SrpR" stoichiometry="1" constant="false"/>
+          <speciesReference species="SrpR_degtagged" stoichiometry="1" constant="false"/>
           <speciesReference species="protein_Ribo" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -357,6 +407,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r10" name="r10" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="IPTG" stoichiometry="2" constant="false"/>
           <speciesReference species="LacI" stoichiometry="2" constant="false"/>
@@ -384,6 +437,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r10rev" name="r10rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_IPTG_2x_LacI_2x_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -402,6 +458,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r11" name="r11" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="aTc" stoichiometry="2" constant="false"/>
           <speciesReference species="TetR" stoichiometry="2" constant="false"/>
@@ -429,6 +488,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r11rev" name="r11rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_TetR_2x_aTc_2x_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -447,6 +509,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r12" name="r12" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="rna_SrpR_assembly" stoichiometry="1" constant="false"/>
           <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
@@ -466,6 +531,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r12rev" name="r12rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_protein_RNAase_rna_SrpR_assembly_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -484,6 +552,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r13" name="r13" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__rna_degredation_mm type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_protein_RNAase_rna_SrpR_assembly_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -501,6 +572,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r14" name="r14" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_protein_Ribo_rna_SrpR_assembly_" stoichiometry="1" constant="false"/>
           <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
@@ -520,6 +594,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r14rev" name="r14rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_complex_protein_Ribo_rna_SrpR_assembly__protein_RNAase_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -538,6 +615,9 @@
         </kineticLaw>
       </reaction>
       <reaction id="r15" name="r15" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__rna_degredation_mm type=massaction</PropensityType>
+        </annotation>
         <listOfReactants>
           <speciesReference species="complex_complex_protein_Ribo_rna_SrpR_assembly__protein_RNAase_" stoichiometry="1" constant="false"/>
         </listOfReactants>
@@ -551,6 +631,69 @@
               <times/>
               <ci> kdeg__rna_degredation_mm </ci>
               <ci> complex_complex_protein_Ribo_rna_SrpR_assembly__protein_RNAase_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r16" name="r16" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="SrpR_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_SrpR_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> SrpR_degtagged </ci>
+              <ci> protease </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r16rev" name="r16rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_SrpR_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SrpR_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_SrpR_degtagged_protease_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r17" name="r17" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__deg_tagged_degredation type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_SrpR_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdeg__deg_tagged_degredation </ci>
+              <ci> complex_SrpR_degtagged_protease_ </ci>
             </apply>
           </math>
         </kineticLaw>

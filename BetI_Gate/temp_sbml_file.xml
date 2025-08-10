@@ -1,0 +1,2671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
+  <model id="biocrnpyler_795346" name="biocrnpyler_795346" substanceUnits="mole" timeUnits="second" volumeUnits="litre" areaUnits="square_metre" lengthUnits="metre" extentUnits="mole">
+    <listOfUnitDefinitions>
+      <unitDefinition id="square_metre">
+        <listOfUnits>
+          <unit kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="default" name="default" spatialDimensions="3" size="1e-06" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" name="part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" name="part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="IPTG_input" name="IPTG" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="LacI_repressor" name="LacI" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_IPTG_input_2x_LacI_repressor_2x_" name="IPTG_input_2x_LacI_repressor_2x" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="aTc_input" name="aTc" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="TetR_repressor" name="TetR" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_TetR_repressor_2x_aTc_input_2x_" name="TetR_repressor_2x_aTc_input_2x" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_RNAP" name="RNAP" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_Ribo" name="Ribo" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_RNAase" name="RNAase" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_RNAP_machinery" name="RNAP" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_AmeR_degtagged" name="AmeR_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_HlyIIR_degtagged" name="HlyIIR_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" name="part_UTR1_forward_part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_Tac_protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" name="complex_part_P_Tac_protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_LacI_repressor_2x_part_P_Tac_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" name="complex_LacI_repressor_2x_part_P_Tac_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_complex_LacI_repressor_2x_part_P_Tac__protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" name="complex_complex_LacI_repressor_2x_part_P_Tac__protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" name="part_UTR1_forward_part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_Tet_protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" name="complex_part_P_Tet_protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_TetR_repressor_2x_part_P_Tet_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" name="complex_TetR_repressor_2x_part_P_Tet_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_complex_TetR_repressor_2x_part_P_Tet__protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" name="complex_complex_TetR_repressor_2x_part_P_Tet__protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_Ribo_machinery" name="Ribo" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_part_P_AmeR_forward_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_" name="part_P_AmeR_forward_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="BetI_degtagged" name="BetI" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_" name="complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_HlyIIR_forward_part_t16_forward_" name="complex_part_UTR1_protein_Ribo_machinery_forward__part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="HlyIIR_degtagged" name="HlyIIR" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_AmeR_forward_part_t16_forward_" name="complex_part_UTR1_protein_Ribo_machinery_forward__part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="AmeR_degtagged" name="AmeR" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protease" name="protease" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_BetI_degtagged_protease_" name="BetI_degtagged_protease" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_HlyIIR_degtagged_protease_" name="HlyIIR_degtagged_protease" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_AmeR_degtagged_protease_" name="AmeR_degtagged_protease" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_protein_RNAase_rna_part_UTR1_forward_part_BetI_forward_part_t16_forward__" name="protein_RNAase_rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_protein_RNAase_rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward__" name="protein_RNAase_rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_protein_RNAase_rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward__" name="protein_RNAase_rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_protein_RNAase_rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward__" name="protein_RNAase_rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="kb__" value="1" constant="true"/>
+      <parameter id="ku__" value="0.01" constant="true"/>
+      <parameter id="kb_P_AmeR_leak_transcription" value="100" constant="true"/>
+      <parameter id="ku_P_AmeR_leak_transcription" value="1" constant="true"/>
+      <parameter id="ktx_P_AmeR_leak_transcription" value="1" constant="true"/>
+      <parameter id="kb__one_step_cooperative_binding" value="100" constant="true"/>
+      <parameter id="ku__one_step_cooperative_binding" value="5" constant="true"/>
+      <parameter id="kb__transcription" value="0.001" constant="true"/>
+      <parameter id="ku__transcription" value="100" constant="true"/>
+      <parameter id="ktx__transcription" value="1" constant="true"/>
+      <parameter id="kb_P_HlyIIR_leak_transcription" value="100" constant="true"/>
+      <parameter id="ku_P_HlyIIR_leak_transcription" value="1" constant="true"/>
+      <parameter id="ktx_P_HlyIIR_leak_transcription" value="1" constant="true"/>
+      <parameter id="kb_P_Tac_leak_transcription" value="100" constant="true"/>
+      <parameter id="ku_P_Tac_leak_transcription" value="0.001" constant="true"/>
+      <parameter id="ktx_P_Tac_leak_transcription" value="1" constant="true"/>
+      <parameter id="kb_P_Tet_leak_transcription" value="100" constant="true"/>
+      <parameter id="ku_P_Tet_leak_transcription" value="0.001" constant="true"/>
+      <parameter id="ktx_P_Tet_leak_transcription" value="1" constant="true"/>
+      <parameter id="ktl__" value="0.2" constant="true"/>
+      <parameter id="kdeg__" value="2" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="r0" name="r0" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="IPTG_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="LacI_repressor" stoichiometry="2" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_IPTG_input_2x_LacI_repressor_2x_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <apply>
+                <power/>
+                <ci> IPTG_input </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <apply>
+                <power/>
+                <ci> LacI_repressor </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r0rev" name="r0rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_IPTG_input_2x_LacI_repressor_2x_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="IPTG_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="LacI_repressor" stoichiometry="2" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_IPTG_input_2x_LacI_repressor_2x_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r1" name="r1" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="aTc_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="TetR_repressor" stoichiometry="2" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_TetR_repressor_2x_aTc_input_2x_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <apply>
+                <power/>
+                <ci> aTc_input </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <apply>
+                <power/>
+                <ci> TetR_repressor </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r1rev" name="r1rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_TetR_repressor_2x_aTc_input_2x_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="aTc_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="TetR_repressor" stoichiometry="2" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_TetR_repressor_2x_aTc_input_2x_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r2" name="r2" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r2rev" name="r2rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r3" name="r3" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r4" name="r4" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_AmeR_degtagged </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r4rev" name="r4rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r5" name="r5" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r5rev" name="r5rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r6" name="r6" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r7" name="r7" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r7rev" name="r7rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r8" name="r8" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r9" name="r9" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_AmeR_degtagged </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r9rev" name="r9rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r10" name="r10" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r10rev" name="r10rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r11" name="r11" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r12" name="r12" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r12rev" name="r12rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r13" name="r13" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r14" name="r14" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_AmeR_degtagged </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r14rev" name="r14rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r15" name="r15" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r15rev" name="r15rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r16" name="r16" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r17" name="r17" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r17rev" name="r17rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r18" name="r18" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r19" name="r19" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_HlyIIR_degtagged </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r19rev" name="r19rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r20" name="r20" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r20rev" name="r20rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r21" name="r21" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r22" name="r22" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r22rev" name="r22rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r23" name="r23" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r24" name="r24" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_HlyIIR_degtagged </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r24rev" name="r24rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r25" name="r25" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r25rev" name="r25rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r26" name="r26" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r27" name="r27" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r27rev" name="r27rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r28" name="r28" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r29" name="r29" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_HlyIIR_degtagged </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r29rev" name="r29rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r30" name="r30" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r30rev" name="r30rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r31" name="r31" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r32" name="r32" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_HlyIIR_leak_transcription </ci>
+              <ci> dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r32rev" name="r32rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r33" name="r33" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_HlyIIR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_HlyIIR_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r34" name="r34" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_HlyIIR_degtagged </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r34rev" name="r34rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r35" name="r35" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r35rev" name="r35rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r36" name="r36" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_complex_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x__protein_RNAP_machinery_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r37" name="r37" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_AmeR_leak_transcription </ci>
+              <ci> dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r37rev" name="r37rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r38" name="r38" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_AmeR_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_AmeR_leak_transcription </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r39" name="r39" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_AmeR_degtagged </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r39rev" name="r39rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r40" name="r40" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r40rev" name="r40rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r41" name="r41" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_complex_part_P_AmeR_protein_AmeR_degtagged_2x__protein_RNAP_machinery_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r42" name="r42" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_Tac_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_Tac_leak_transcription </ci>
+              <ci> dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r42rev" name="r42rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_Tac_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_Tac_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r43" name="r43" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_Tac_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_Tac_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r44" name="r44" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="LacI_repressor" stoichiometry="2" constant="false"/>
+          <speciesReference species="dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_LacI_repressor_2x_part_P_Tac_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> LacI_repressor </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r44rev" name="r44rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_LacI_repressor_2x_part_P_Tac_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="LacI_repressor" stoichiometry="2" constant="false"/>
+          <speciesReference species="dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_LacI_repressor_2x_part_P_Tac_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r45" name="r45" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_LacI_repressor_2x_part_P_Tac_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_LacI_repressor_2x_part_P_Tac__protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_complex_LacI_repressor_2x_part_P_Tac_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r45rev" name="r45rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_LacI_repressor_2x_part_P_Tac__protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_LacI_repressor_2x_part_P_Tac_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_complex_complex_LacI_repressor_2x_part_P_Tac__protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r46" name="r46" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_LacI_repressor_2x_part_P_Tac__protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_LacI_repressor_2x_part_P_Tac_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_complex_complex_LacI_repressor_2x_part_P_Tac__protein_RNAP_machinery_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r47" name="r47" reversible="false">
+        <annotation>
+          <PropensityType> k=kb_P_Tet_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb_P_Tet_leak_transcription </ci>
+              <ci> dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r47rev" name="r47rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku_P_Tet_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku_P_Tet_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_Tet_protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r48" name="r48" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_Tet_leak_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_Tet_leak_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_Tet_protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r49" name="r49" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="TetR_repressor" stoichiometry="2" constant="false"/>
+          <speciesReference species="dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_TetR_repressor_2x_part_P_Tet_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> TetR_repressor </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+              <ci> dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r49rev" name="r49rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_TetR_repressor_2x_part_P_Tet_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="TetR_repressor" stoichiometry="2" constant="false"/>
+          <speciesReference species="dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_TetR_repressor_2x_part_P_Tet_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r50" name="r50" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_TetR_repressor_2x_part_P_Tet_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_complex_TetR_repressor_2x_part_P_Tet__protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__transcription </ci>
+              <ci> ordered_polymer_complex_TetR_repressor_2x_part_P_Tet_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAP_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r50rev" name="r50rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_TetR_repressor_2x_part_P_Tet__protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_TetR_repressor_2x_part_P_Tet_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__transcription </ci>
+              <ci> ordered_polymer_complex_complex_TetR_repressor_2x_part_P_Tet__protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r51" name="r51" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_complex_TetR_repressor_2x_part_P_Tet__protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_TetR_repressor_2x_part_P_Tet_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__transcription </ci>
+              <ci> ordered_polymer_complex_complex_TetR_repressor_2x_part_P_Tet__protein_RNAP_machinery_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r52" name="r52" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_part_P_AmeR_forward_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_Ribo_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r52rev" name="r52rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_AmeR_forward_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> ordered_polymer_part_P_AmeR_forward_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r53" name="r53" reversible="false">
+        <annotation>
+          <PropensityType> k=ktl__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_part_P_AmeR_forward_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="BetI_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktl__ </ci>
+              <ci> ordered_polymer_part_P_AmeR_forward_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r54" name="r54" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_Ribo_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r54rev" name="r54rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r55" name="r55" reversible="false">
+        <annotation>
+          <PropensityType> k=ktl__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="BetI_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktl__ </ci>
+              <ci> ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_BetI_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r56" name="r56" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+              <ci> protein_Ribo_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r56rev" name="r56rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_HlyIIR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r57" name="r57" reversible="false">
+        <annotation>
+          <PropensityType> k=ktl__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="HlyIIR_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktl__ </ci>
+              <ci> ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_HlyIIR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r58" name="r58" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+              <ci> protein_Ribo_machinery </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r58rev" name="r58rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_AmeR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r59" name="r59" reversible="false">
+        <annotation>
+          <PropensityType> k=ktl__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="AmeR_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Ribo_machinery" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktl__ </ci>
+              <ci> ordered_polymer_complex_part_UTR1_protein_Ribo_machinery_forward__part_AmeR_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r60" name="r60" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="BetI_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_BetI_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> BetI_degtagged </ci>
+              <ci> protease </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r60rev" name="r60rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_BetI_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="BetI_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_BetI_degtagged_protease_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r61" name="r61" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_BetI_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdeg__ </ci>
+              <ci> complex_BetI_degtagged_protease_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r62" name="r62" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="HlyIIR_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_HlyIIR_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> HlyIIR_degtagged </ci>
+              <ci> protease </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r62rev" name="r62rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_HlyIIR_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="HlyIIR_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_HlyIIR_degtagged_protease_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r63" name="r63" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_HlyIIR_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdeg__ </ci>
+              <ci> complex_HlyIIR_degtagged_protease_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r64" name="r64" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="AmeR_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_AmeR_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> AmeR_degtagged </ci>
+              <ci> protease </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r64rev" name="r64rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_AmeR_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AmeR_degtagged" stoichiometry="1" constant="false"/>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_AmeR_degtagged_protease_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r65" name="r65" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_AmeR_degtagged_protease_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protease" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdeg__ </ci>
+              <ci> complex_AmeR_degtagged_protease_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r66" name="r66" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_protein_RNAase_rna_part_UTR1_forward_part_BetI_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAase </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r66rev" name="r66rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_protein_RNAase_rna_part_UTR1_forward_part_BetI_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_protein_RNAase_rna_part_UTR1_forward_part_BetI_forward_part_t16_forward__ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r67" name="r67" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_protein_RNAase_rna_part_UTR1_forward_part_BetI_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdeg__ </ci>
+              <ci> complex_protein_RNAase_rna_part_UTR1_forward_part_BetI_forward_part_t16_forward__ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r68" name="r68" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_protein_RNAase_rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAase </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r68rev" name="r68rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_protein_RNAase_rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_protein_RNAase_rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward__ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r69" name="r69" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_protein_RNAase_rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdeg__ </ci>
+              <ci> complex_protein_RNAase_rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward__ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r70" name="r70" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_protein_RNAase_rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAase </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r70rev" name="r70rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_protein_RNAase_rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_protein_RNAase_rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward__ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r71" name="r71" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_protein_RNAase_rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdeg__ </ci>
+              <ci> complex_protein_RNAase_rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward__ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r72" name="r72" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_protein_RNAase_rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__ </ci>
+              <ci> rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+              <ci> protein_RNAase </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r72rev" name="r72rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_protein_RNAase_rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__ </ci>
+              <ci> complex_protein_RNAase_rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward__ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r73" name="r73" reversible="false">
+        <annotation>
+          <PropensityType> k=kdeg__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_protein_RNAase_rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward__" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_RNAase" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdeg__ </ci>
+              <ci> complex_protein_RNAase_rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward__ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
