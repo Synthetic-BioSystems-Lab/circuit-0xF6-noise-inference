@@ -40,7 +40,7 @@ component_parameters = {
     # ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tet_TetR', name = "ktx"): 0.05,
     
     #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_PhlF_PhlF_degtagged', name = 'kb'):.01, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_PhlF_PhlF_degtagged', name = 'kb'):1, 
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_PhlF_PhlF_degtagged', name = 'ku'):100, 
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_PhlF_PhlF_degtagged', name = "ktx"): 0.05,
     
