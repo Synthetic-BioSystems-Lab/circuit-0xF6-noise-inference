@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Aug  9 20:04:11 2025
+Created on Mon Aug 11 18:17:40 2025
 
 @author: zacha
 """
@@ -25,9 +25,29 @@ component_parameters = {
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2, 
     
     #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):0.01, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):1, 
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'ku'):100, 
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_AmeR_AmeR_degtagged', name = 'kb'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_AmeR_AmeR_degtagged', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_AmeR_AmeR_degtagged', name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_HlyIIR_HlyIIR_degtagged', name = 'kb'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_HlyIIR_HlyIIR_degtagged', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_HlyIIR_HlyIIR_degtagged', name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_SrpR_SrpR_degtagged', name = 'kb'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_SrpR_SrpR_degtagged', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_SrpR_SrpR_degtagged', name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BetI_BetI_degtagged', name = 'kb'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BetI_BetI_degtagged', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BetI_BetI_degtagged', name = "ktx"): 0.05,
     
     #AraAraC Bound Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_Ara_2x_AraC_2x', name = 'kb'):100, 
@@ -36,7 +56,7 @@ component_parameters = {
     
     #P_BAD Leak Parameters for transcription
     #These regulate expression of an unbound promoter
-    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "kb"): 0.01,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "kb"): 1,
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "ku"): 100,
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "ktx"): 0.05,
     
@@ -90,6 +110,24 @@ component_parameters = {
     
 }
 
+combinatorial_parameters = {
+    #Defalt Promoter Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'kb'):100, 
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'ku'):10, 
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2, 
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = "ktx"): 0.05,
+    
+    #Leak Parameters for transcription
+    #These regulate expression of an unbound promoter
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_SrpR_BetI_leak', name = "kb"): 100,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_SrpR_BetI_leak', name = "ku"): 10,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_SrpR_BetI_leak', name = "ktx"):0.05 
+}
+
 #Species
 
 IPTG = Species('IPTG') #Input A
@@ -131,6 +169,9 @@ CDS_AmtR.protein = Species('AmtR', material_type='protein', attributes=['degtagg
 CDS_YFP = CDS('YFP', 'YFP')
 CDS_YFP.protein = Species('YFP', material_type='protein', attributes=['degtagged'])
 
+SrpR = Species('SrpR', material_type='protein', attributes=['degtagged'])
+BetI = Species('BetI', material_type='protein', attributes=['degtagged'])
+
 t16 = Terminator('t16')
 
 P_Tac = RegulatedPromoter('P_Tac',  regulators = [LacI], leak=True, 
@@ -140,10 +181,10 @@ P_Tet = RegulatedPromoter('P_Tet', regulators = [TetR], leak=True,
 P_BAD = RegulatedPromoter('P_BAD', regulators = [AraAraC], leak=True,
                           parameters = component_parameters)
 
-P_SrpR = RegulatedPromoter('P_SrpR',  regulators = ['SrpR_degtagged'], leak=True, 
-                          parameters = component_parameters)
-P_BetI = RegulatedPromoter('P_BetI',  regulators = ['BetI_degtagged'], leak=True, 
-                          parameters = component_parameters)
+P_SrpR_BetI = CombinatorialPromoter('P_SrpR_BetI', [SrpR, BetI], tx_capable_list= 
+                                    [[SrpR, BetI]], parameters = combinatorial_parameters, 
+                                    leak=True,)
+
 P_HlyIIR = RegulatedPromoter('P_HlyIIR',  regulators = ['HlyIIR_degtagged'], leak=True, 
                           parameters = component_parameters)
 P_AmeR = RegulatedPromoter('P_AmeR',  regulators = ['AmeR_degtagged'], leak=True, 
@@ -155,7 +196,7 @@ P_PhlF = RegulatedPromoter('P_PhlF',  regulators = ['PhlF_degtagged'], leak=True
 
 #DNA_constructs
 
-PhlF_construct = DNA_construct([P_SrpR, P_BetI, rbs, CDS_PhlF, t16])
+PhlF_construct = DNA_construct([P_SrpR_BetI, rbs, CDS_PhlF, t16])
 
 SrpR_construct = DNA_construct([P_Tac, P_Tet, rbs, CDS_SrpR, t16])
 
@@ -180,7 +221,7 @@ global_mechanisms = {"dilution":dilution_mechanism}
 # global_mechanisms = {"degredation":degredation_mechanism}
 
 M = TxTlExtract(name="txtl", parameters = parameters, global_mechanisms = global_mechanisms,
-                      components=[AmtR_construct, YFP_construct, AraAraC])
+                      components=[PhlF_construct, YFP_construct])
 CRN = M.compile_crn()
 # CRN.write_sbml_file('Circuit_0xF6_AB_only_sbml.xml') #saving CRN as sbml
 
@@ -189,16 +230,14 @@ with open('temp_CRN_EQNs.txt', 'w') as f:
 
 sim = GCSim(CRN)
 
-protein_lst = ['protein_AmtR_degtagged', 'protein_YFP_degtagged']
+protein_lst = ['protein_PhlF_degtagged']
 
 #Plotting
-for a in [0]:
-    for b in [0]:
-        for c in [0,100]:
+for a, b in [[0, 0], [150, 500], [350, 250], [400, 100], [600, 600]]:
 
-            x0 = {YFP_construct.get_species():5, 
-                  AmtR_construct.get_species():5, Ara:c, AraC:c, "protein_RNAP":15, 
-                  "protein_Ribo":150., 'protein_RNAase':45}
-            timepoints = np.linspace(0, 10000, 1000)
-            R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}, Ara = {c}')
-            # R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}_Ara{c}.xlsx', index=False)
+    x0 = {YFP_construct.get_species():5, 
+          PhlF_construct.get_species():5, SrpR:a, BetI:b, "protein_RNAP":15, 
+          "protein_Ribo":150., 'protein_RNAase':45}
+    timepoints = np.linspace(0, 4000, 1000)
+    R = sim.basicsim(x0, timepoints, protein_lst, title = f'SrpR = {a}, BetI = {b}')
+    # R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}_Ara{c}.xlsx', index=False)

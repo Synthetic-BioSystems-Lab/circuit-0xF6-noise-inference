@@ -13,21 +13,31 @@ import pandas as pd
 from GCSim import GCSim
 
 #parameters that lead to steady state
-# parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.2, "kdeg":2,"kint":.05}
+# parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.2, "kdeg":2}
 # complex_parameters = {'kb':1.0, 'ku':0.01}
 
-parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.05, "kdeg":0.0075,"kint":.05}
+parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.05, "kdeg":0.001, "kdil":0.0075}
 complex_parameters = {'kb':100, 'ku':10}
 component_parameters = {
     #Defalt Promoter Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'kb'):100, 
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'ku'):10, 
-    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2.0, 
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2, 
     
     #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):1, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):10, 
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'ku'):100, 
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tac_LacI', name = 'kb'):1, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tac_LacI', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tac_LacI', name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tet_TetR', name = 'kb'):1, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tet_TetR', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tet_TetR', name = "ktx"): 0.05,
     
     #AraAraC Bound Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_Ara_2x_AraC_2x', name = 'kb'):100, 
@@ -165,9 +175,13 @@ YFP_construct = DNA_construct([P_PhlF, rbs, CDS_YFP, t16], mechanisms = mechanis
 
 #Mixture and CRN creation
 
-degredation_mechanism = Deg_Tagged_Degredation(protease)
+dilution_mechanism = Dilution(filter_dict = {"degtagged":True}, default_on = False)
 
-global_mechanisms = {"degredation":degredation_mechanism}
+global_mechanisms = {"dilution":dilution_mechanism}
+
+# degredation_mechanism = Deg_Tagged_Degredation(protease)
+
+# global_mechanisms = {"degredation":degredation_mechanism}
 
 M = TxTlExtract(name="txtl", parameters = parameters, global_mechanisms = global_mechanisms,
                       components=[PhlF_construct, SrpR_construct, BetI_construct, AmeR_construct, 
@@ -177,10 +191,12 @@ CRN = M.compile_crn()
 
 print('CRN compiled')
 
+with open('temp_CRN_EQNs.txt', 'w') as f:
+    f.write(CRN.pretty_print(show_rates = True, show_keys = True))
+
 sim = GCSim(CRN)
 
-protein_lst = ['protein_PhlF_degtagged', 'protein_YFP_degtagged', 
-               'protein_SrpR_degtagged', 'protein_BetI_degtagged']
+protein_lst = ['protein_SrpR_degtagged', 'protein_BetI_degtagged']
 
 #Plotting
 for a in [0, 100]:
@@ -189,9 +205,9 @@ for a in [0, 100]:
         x0 = {PhlF_construct.get_species():5, SrpR_construct.get_species():5, 
               BetI_construct.get_species():5, AmeR_construct.get_species():5, 
               HlyIIR_construct.get_species():5, YFP_construct.get_species():5, 
-              IPTG:a, LacI:100, aTc:b, TetR:100, protease:2.5, "protein_RNAP":15, 
+              IPTG:a, LacI:100, aTc:b, TetR:100, "protein_RNAP":15, 
               "protein_Ribo":150., 'protein_RNAase':45}
-        timepoints = np.linspace(0, 1000, 1000)
+        timepoints = np.linspace(0, 4000, 2000)
         R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}')
-        print(f"{R['protein_YFP_degtagged'][len(timepoints)-1]}")
+        # print(f"{R['protein_YFP_degtagged'][len(timepoints)-1]}")
         # R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}.xlsx', index=False)

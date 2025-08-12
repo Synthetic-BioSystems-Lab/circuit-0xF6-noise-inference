@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Aug  9 20:04:11 2025
+Created on Mon Aug 11 17:18:52 2025
 
 @author: zacha
 """
@@ -25,9 +25,29 @@ component_parameters = {
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2, 
     
     #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):0.01, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):1, 
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'ku'):100, 
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_AmeR_AmeR_degtagged', name = 'kb'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_AmeR_AmeR_degtagged', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_AmeR_AmeR_degtagged', name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_HlyIIR_HlyIIR_degtagged', name = 'kb'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_HlyIIR_HlyIIR_degtagged', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_HlyIIR_HlyIIR_degtagged', name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_SrpR_SrpR_degtagged', name = 'kb'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_SrpR_SrpR_degtagged', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_SrpR_SrpR_degtagged', name = "ktx"): 0.05,
+    
+    #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BetI_BetI_degtagged', name = 'kb'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BetI_BetI_degtagged', name = 'ku'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BetI_BetI_degtagged', name = "ktx"): 0.05,
     
     #AraAraC Bound Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_Ara_2x_AraC_2x', name = 'kb'):100, 
@@ -36,7 +56,7 @@ component_parameters = {
     
     #P_BAD Leak Parameters for transcription
     #These regulate expression of an unbound promoter
-    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "kb"): 0.01,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "kb"): 1,
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "ku"): 100,
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_leak', name = "ktx"): 0.05,
     
@@ -169,6 +189,9 @@ AmtR_construct = DNA_construct([P_BAD, rbs, CDS_AmtR, t16])
 
 YFP_construct = DNA_construct([P_AmtR, rbs, CDS_YFP, t16])
 
+SrpR = Species('SrpR', material_type='protein', attributes=['degtagged'])
+BetI = Species('BetI', material_type='protein', attributes=['degtagged'])
+
 #Mixture and CRN creation
 
 dilution_mechanism = Dilution(filter_dict = {"degtagged":True}, default_on = False)
@@ -180,7 +203,7 @@ global_mechanisms = {"dilution":dilution_mechanism}
 # global_mechanisms = {"degredation":degredation_mechanism}
 
 M = TxTlExtract(name="txtl", parameters = parameters, global_mechanisms = global_mechanisms,
-                      components=[AmtR_construct, YFP_construct, AraAraC])
+                      components=[PhlF_construct, YFP_construct])
 CRN = M.compile_crn()
 # CRN.write_sbml_file('Circuit_0xF6_AB_only_sbml.xml') #saving CRN as sbml
 
@@ -189,16 +212,15 @@ with open('temp_CRN_EQNs.txt', 'w') as f:
 
 sim = GCSim(CRN)
 
-protein_lst = ['protein_AmtR_degtagged', 'protein_YFP_degtagged']
+protein_lst = ['protein_PhlF_degtagged', 'protein_YFP_degtagged']
 
 #Plotting
-for a in [0]:
-    for b in [0]:
-        for c in [0,100]:
+for a, b in [[0, 0], [150, 500], [350, 250], [400, 100], [600, 600]]:
 
-            x0 = {YFP_construct.get_species():5, 
-                  AmtR_construct.get_species():5, Ara:c, AraC:c, "protein_RNAP":15, 
-                  "protein_Ribo":150., 'protein_RNAase':45}
-            timepoints = np.linspace(0, 10000, 1000)
-            R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}, Ara = {c}')
-            # R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}_Ara{c}.xlsx', index=False)
+    x0 = {YFP_construct.get_species():5, 
+          PhlF_construct.get_species():5, SrpR:a, BetI:b, "protein_RNAP":15, 
+          "protein_Ribo":150., 'protein_RNAase':45}
+    timepoints = np.linspace(0, 4000, 1000)
+    R = sim.basicsim(x0, timepoints, protein_lst, title = f'SrpR = {a}, BetI = {b}')
+    # R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}_Ara{c}.xlsx', index=False)
+    
