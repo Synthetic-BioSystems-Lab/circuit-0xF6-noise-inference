@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Aug  9 19:21:59 2025
+Created on Tue Aug 12 10:26:48 2025
 
 @author: zacha
 """
@@ -27,7 +27,7 @@ component_parameters = {
     #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'kb'):10, 
     ParameterKey(mechanism = 'transcription_mm', part_id = None, name = 'ku'):100, 
-    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = "ktx"): 0.05,
+    ParameterKey(mechanism = 'transcription_mm', part_id = None, name = "ktx"): 0.025,
     
     # #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
     # ParameterKey(mechanism = 'transcription_mm', part_id = 'P_Tac_LacI', name = 'kb'):1, 
@@ -45,9 +45,9 @@ component_parameters = {
     ParameterKey(mechanism = 'transcription_mm', part_id = 'P_PhlF_PhlF_degtagged', name = "ktx"): 0.05,
     
     #AraAraC Bound Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_protein_AraC_input_2x_protein_Ara_input_2x', name = 'kb'):100, 
-    ParameterKey(mechanism = 'transcription_mm', part_id = "P_BAD_protein_AraC_input_2x_protein_Ara_input_2x", name = 'ku'):10, 
-    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_protein_AraC_input_2x_protein_Ara_input_2x', name = "ktx"): 0.05,
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_Ara_2x_AraC_2x', name = 'kb'):100, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = "P_BAD_Ara_2x_AraC_2x", name = 'ku'):10, 
+    ParameterKey(mechanism = 'transcription_mm', part_id = 'P_BAD_Ara_2x_AraC_2x', name = "ktx"): 0.05,
     
     #P_BAD Leak Parameters for transcription
     #These regulate expression of an unbound promoter
@@ -208,12 +208,12 @@ print('CRN Compiled')
 
 sim = GCSim(CRN)
 
-protein_lst = ['protein_PhlF_degtagged',  'protein_YFP_degtagged',
+protein_lst = ['protein_PhlF_degtagged', 'protein_YFP_degtagged',
                'protein_SrpR_degtagged', 'protein_BetI_degtagged']
 
 #Plotting
-for a in [0]:
-    for b in [0]:
+for a in [0, 100]:
+    for b in [0, 100]:
         for c in [0, 100]:
 
             x0 = {PhlF_construct.get_species():3, SrpR_construct.get_species():3, 
@@ -222,8 +222,6 @@ for a in [0]:
                   AmtR_construct.get_species():3, Ara:c, AraC:c,
                   IPTG:a, LacI:100, aTc:b, TetR:100, "protein_RNAP":15, 
                   "protein_Ribo":150., 'protein_RNAase':45}
-            timepoints = np.linspace(0, 3000, 3000)
+            timepoints = np.linspace(0, 5000, 500)
             R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}, Ara = {c}')
-            R[['time'] + protein_lst].to_excel(f'{a}, {b}, {c}.xlsx', index=False)
             # R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}_Ara_{c}.xlsx', index=False)
-            

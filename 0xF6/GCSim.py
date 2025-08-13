@@ -16,7 +16,8 @@ class GCSim:
     def __init__(self, CRN):
         self.CRN = CRN
         
-    def basicsim(self, x0, timepoints, protein_lst, title = '', xlabel = '', ylabel = ''):
+    def basicsim(self, x0, timepoints, protein_lst, title = '', xlabel = '', 
+                 ylabel = ''):
         
         plt.figure()
         
@@ -31,7 +32,7 @@ class GCSim:
         plt.ylabel(ylabel)
         
         plt.show()
-        
+
         return R
         
     def heatmap(self, x0, timepoints, max_conc, num_val, input_a, input_b, output_protein, title = '', 

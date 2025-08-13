@@ -1,0 +1,432 @@
+Species(N = 32) = {
+complex[2x_protein[TetR]:2x_protein[aTc]] (@ 0),  complex[protein[RNAase]:rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]] (@ 0),  complex[protein[RNAase]:rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]] (@ 0),  complex[2x_protein[IPTG]:2x_protein[LacI]] (@ 0),  rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_Tet-forward]:complex[part[UTR1]:protein[Ribo]-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  dna[part[P_Tac-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_Tac-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[UTR1]:protein[Ribo]-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] (@ 0),  protein[aTc(input)] (@ 0),  protein[TetR(input)] (@ 0),  protein[SrpR(degtagged)] (@ 0),  protein[Ribo] (@ 0),  protein[RNAase] (@ 0),  protein[RNAP] (@ 0),  protein[LacI(input)] (@ 0),  protein[IPTG(input)] (@ 0),  
+}
+
+Reactions (51) = [
+0. 2protein[IPTG(input)]+2protein[LacI(input)] <--> complex[2x_protein[IPTG]:2x_protein[LacI]]
+ Kf=k_forward * protein_IPTG_input^2 * protein_LacI_input^2
+ Kr=k_reverse * complex_protein_IPTG_input_2x_protein_LacI_input_2x_
+  k_forward=100
+  found_key=(mech=None, partid=None, name=kb).
+  search_key=(mech=one_step_binding, partid=protein_IPTG_input_2x_protein_LacI_input_2x, name=kb).
+  k_reverse=10
+  found_key=(mech=None, partid=None, name=ku).
+  search_key=(mech=one_step_binding, partid=protein_IPTG_input_2x_protein_LacI_input_2x, name=ku).
+
+1. 2protein[aTc(input)]+2protein[TetR(input)] <--> complex[2x_protein[TetR]:2x_protein[aTc]]
+ Kf=k_forward * protein_aTc_input^2 * protein_TetR_input^2
+ Kr=k_reverse * complex_protein_TetR_input_2x_protein_aTc_input_2x_
+  k_forward=100
+  found_key=(mech=None, partid=None, name=kb).
+  search_key=(mech=one_step_binding, partid=protein_TetR_input_2x_protein_aTc_input_2x, name=kb).
+  k_reverse=10
+  found_key=(mech=None, partid=None, name=ku).
+  search_key=(mech=one_step_binding, partid=protein_TetR_input_2x_protein_aTc_input_2x, name=ku).
+
+2. ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=kb).
+  k_reverse=10
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=ku).
+
+3. ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=ktx).
+
+4. 2protein[TetR(input)]+ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] <--> ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * protein_TetR_input^2 * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tet_TetR, name=kb).
+  k_reverse=10
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tet_TetR, name=ku).
+
+5. ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=10
+  found_key=(mech=transcription_mm, partid=None, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=kb).
+  k_reverse=100
+  found_key=(mech=transcription_mm, partid=None, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=ku).
+
+6. ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=None, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=ktx).
+
+7. ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=kb).
+  k_reverse=10
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=ku).
+
+8. ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=ktx).
+
+9. 2protein[TetR(input)]+ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * protein_TetR_input^2 * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tet_TetR, name=kb).
+  k_reverse=10
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tet_TetR, name=ku).
+
+10. ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=10
+  found_key=(mech=transcription_mm, partid=None, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=kb).
+  k_reverse=100
+  found_key=(mech=transcription_mm, partid=None, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=ku).
+
+11. ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=None, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=ktx).
+
+12. ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=kb).
+  k_reverse=10
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=ku).
+
+13. ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=ktx).
+
+14. 2protein[TetR(input)]+ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * protein_TetR_input^2 * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tet_TetR, name=kb).
+  k_reverse=10
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tet_TetR, name=ku).
+
+15. ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=10
+  found_key=(mech=transcription_mm, partid=None, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=kb).
+  k_reverse=100
+  found_key=(mech=transcription_mm, partid=None, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=ku).
+
+16. ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=None, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=ktx).
+
+17. ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=kb).
+  k_reverse=10
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=ku).
+
+18. ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=ktx).
+
+19. 2protein[LacI(input)]+ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * protein_LacI_input^2 * ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=kb).
+  k_reverse=10
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=ku).
+
+20. ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=10
+  found_key=(mech=transcription_mm, partid=None, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=kb).
+  k_reverse=100
+  found_key=(mech=transcription_mm, partid=None, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=ku).
+
+21. ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=None, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=ktx).
+
+22. ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=kb).
+  k_reverse=10
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=ku).
+
+23. ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=ktx).
+
+24. 2protein[LacI(input)]+ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * protein_LacI_input^2 * ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=kb).
+  k_reverse=10
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=ku).
+
+25. ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=10
+  found_key=(mech=transcription_mm, partid=None, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=kb).
+  k_reverse=100
+  found_key=(mech=transcription_mm, partid=None, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=ku).
+
+26. ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=None, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=ktx).
+
+27. ordered_polymer[part[P_Tac-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_Tac_forward_complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=kb).
+  k_reverse=10
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=ku).
+
+28. ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[part[P_Tac-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=ktx).
+
+29. 2protein[LacI(input)]+ordered_polymer[part[P_Tac-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * protein_LacI_input^2 * ordered_polymer_part_P_Tac_forward_complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=kb).
+  k_reverse=10
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=ku).
+
+30. ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=10
+  found_key=(mech=transcription_mm, partid=None, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=kb).
+  k_reverse=100
+  found_key=(mech=transcription_mm, partid=None, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=ku).
+
+31. ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=None, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=ktx).
+
+32. dna[part[P_Tac-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=kb).
+  k_reverse=10
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=ku).
+
+33. ordered_polymer[complex[part[P_Tac]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> dna[part[P_Tac-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_RNAP_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=P_Tac_leak, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tac_leak, name=ktx).
+
+34. 2protein[LacI(input)]+dna[part[P_Tac-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * protein_LacI_input^2 * dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=kb).
+  k_reverse=10
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=ku).
+
+35. ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=10
+  found_key=(mech=transcription_mm, partid=None, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=kb).
+  k_reverse=100
+  found_key=(mech=transcription_mm, partid=None, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=ku).
+
+36. ordered_polymer[complex[complex[part[P_Tac]:2x_protein[LacI]]:protein[RNAP]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:2x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_complex_complex_part_P_Tac_protein_LacI_input_2x__protein_RNAP_forward__part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=None, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tac_LacI, name=ktx).
+
+37. dna[part[P_Tac-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=kb).
+  k_reverse=10
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=ku).
+
+38. ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> dna[part[P_Tac-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=P_Tet_leak, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tet_leak, name=ktx).
+
+39. 2protein[TetR(input)]+dna[part[P_Tac-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] <--> ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * protein_TetR_input^2 * dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tet_TetR, name=kb).
+  k_reverse=10
+  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tet_TetR, name=ku).
+
+40. ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP] <--> ordered_polymer[part[P_Tac-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAP
+ Kr=k_reverse * ordered_polymer_part_P_Tac_forward_complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=10
+  found_key=(mech=transcription_mm, partid=None, name=kb).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=kb).
+  k_reverse=100
+  found_key=(mech=transcription_mm, partid=None, name=ku).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=ku).
+
+41. ordered_polymer[part[P_Tac-forward]:complex[complex[part[P_Tet]:2x_protein[TetR]]:protein[RNAP]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:2x_protein[TetR]-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAP]
+ Kf=k_forward * ordered_polymer_part_P_Tac_forward_complex_complex_part_P_Tet_protein_TetR_input_2x__protein_RNAP_forward__part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=transcription_mm, partid=None, name=ktx).
+  search_key=(mech=transcription_mm, partid=P_Tet_TetR, name=ktx).
+
+42. rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[Ribo] <--> ordered_polymer[part[P_Tet-forward]:complex[part[UTR1]:protein[Ribo]-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * rna_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_Ribo
+ Kr=k_reverse * ordered_polymer_part_P_Tet_forward_complex_part_UTR1_protein_Ribo_forward__part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=None, partid=None, name=kb).
+  search_key=(mech=translation_mm, partid=UTR1, name=kb).
+  k_reverse=10
+  found_key=(mech=None, partid=None, name=ku).
+  search_key=(mech=translation_mm, partid=UTR1, name=ku).
+
+43. ordered_polymer[part[P_Tet-forward]:complex[part[UTR1]:protein[Ribo]-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[SrpR(degtagged)]+protein[Ribo]
+ Kf=k_forward * ordered_polymer_part_P_Tet_forward_complex_part_UTR1_protein_Ribo_forward__part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=None, partid=None, name=ktl).
+  search_key=(mech=translation_mm, partid=UTR1, name=ktl).
+
+44. rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[Ribo] <--> ordered_polymer[complex[part[UTR1]:protein[Ribo]-forward]:part[CDS_SrpR-forward]:part[t16-forward]]
+ Kf=k_forward * rna_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_Ribo
+ Kr=k_reverse * ordered_polymer_complex_part_UTR1_protein_Ribo_forward__part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=100
+  found_key=(mech=None, partid=None, name=kb).
+  search_key=(mech=translation_mm, partid=UTR1, name=kb).
+  k_reverse=10
+  found_key=(mech=None, partid=None, name=ku).
+  search_key=(mech=translation_mm, partid=UTR1, name=ku).
+
+45. ordered_polymer[complex[part[UTR1]:protein[Ribo]-forward]:part[CDS_SrpR-forward]:part[t16-forward]] --> rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[SrpR(degtagged)]+protein[Ribo]
+ Kf=k_forward * ordered_polymer_complex_part_UTR1_protein_Ribo_forward__part_CDS_SrpR_forward_part_t16_forward_
+  k_forward=0.05
+  found_key=(mech=None, partid=None, name=ktl).
+  search_key=(mech=translation_mm, partid=UTR1, name=ktl).
+
+46. protein[SrpR(degtagged)] --> 
+ Kf=k_forward * protein_SrpR_degtagged
+  k_forward=0.0075
+  found_key=(mech=None, partid=None, name=kdil).
+  search_key=(mech=global_degredation_via_dilution, partid=protein_SrpR_degtagged, name=kdil).
+
+47. rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAase] <--> complex[protein[RNAase]:rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]]
+ Kf=k_forward * rna_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAase
+ Kr=k_reverse * complex_protein_RNAase_rna_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward__
+  k_forward=100
+  found_key=(mech=None, partid=None, name=kb).
+  search_key=(mech=rna_degredation_mm, partid=rna_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_, name=kb).
+  k_reverse=10
+  found_key=(mech=None, partid=None, name=ku).
+  search_key=(mech=rna_degredation_mm, partid=rna_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_, name=ku).
+
+48. complex[protein[RNAase]:rna[part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]] --> protein[RNAase]
+ Kf=k_forward * complex_protein_RNAase_rna_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward__
+  k_forward=0.001
+  found_key=(mech=None, partid=None, name=kdeg).
+  search_key=(mech=rna_degredation_mm, partid=rna_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_, name=kdeg).
+
+49. rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]+protein[RNAase] <--> complex[protein[RNAase]:rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]]
+ Kf=k_forward * rna_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_ * protein_RNAase
+ Kr=k_reverse * complex_protein_RNAase_rna_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward__
+  k_forward=100
+  found_key=(mech=None, partid=None, name=kb).
+  search_key=(mech=rna_degredation_mm, partid=rna_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_, name=kb).
+  k_reverse=10
+  found_key=(mech=None, partid=None, name=ku).
+  search_key=(mech=rna_degredation_mm, partid=rna_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_, name=ku).
+
+50. complex[protein[RNAase]:rna[part[P_Tet-forward]:part[UTR1-forward]:part[CDS_SrpR-forward]:part[t16-forward]]] --> protein[RNAase]
+ Kf=k_forward * complex_protein_RNAase_rna_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward__
+  k_forward=0.001
+  found_key=(mech=None, partid=None, name=kdeg).
+  search_key=(mech=rna_degredation_mm, partid=rna_part_P_Tet_forward_part_UTR1_forward_part_CDS_SrpR_forward_part_t16_forward_, name=kdeg).
+
+]
