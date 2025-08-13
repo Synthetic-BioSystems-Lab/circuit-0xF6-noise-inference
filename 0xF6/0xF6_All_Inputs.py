@@ -216,10 +216,10 @@ for a in [0, 100]:
     for b in [0, 100]:
         for c in [0, 100]:
 
-            x0 = {PhlF_construct.get_species():5, SrpR_construct.get_species():5, 
-                  BetI_construct.get_species():5, AmeR_construct.get_species():5, 
-                  HlyIIR_construct.get_species():5, YFP_construct.get_species():5, 
-                  AmtR_construct.get_species():5, Ara:c, AraC:c,
+            x0 = {PhlF_construct.get_species():3, SrpR_construct.get_species():3, 
+                  BetI_construct.get_species():3, AmeR_construct.get_species():3, 
+                  HlyIIR_construct.get_species():3, YFP_construct.get_species():3, 
+                  AmtR_construct.get_species():3, Ara:c, AraC:c,
                   IPTG:a, LacI:100, aTc:b, TetR:100, "protein_RNAP":15, 
                   "protein_Ribo":150., 'protein_RNAase':45}
             timepoints = np.linspace(0, 10000, 10000)
