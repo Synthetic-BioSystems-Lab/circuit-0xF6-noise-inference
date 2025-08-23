@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Aug 12 19:42:36 2025
+Created on Wed Aug 13 11:41:08 2025
 
 @author: zacha
 """
@@ -16,16 +16,27 @@ from GCSim import GCSim
 # parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.05, "kdeg":0.0075}
 # complex_parameters = {'kb':100, 'ku':10}
 
-parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.05, "kdeg":0.001, "kdil":0.0075}
+parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.05,
+            
+            ParameterKey(mechanism = 'global_degredation_via_dilution', part_id = None, name = 'kdil'):0.0075,
+            ParameterKey(mechanism = 'global_degredation_via_dilution', part_id = 'protein_BetI_degtagged', name = 'kdil'):0.0075,
+            ParameterKey(mechanism = 'global_degredation_via_dilution', part_id = 'protein_PhlF_degtagged', name = 'kdil'):0.0075,
+            ParameterKey(mechanism = 'global_degredation_via_dilution', part_id = 'protein_YFP_degtagged', name = 'kdil'):0.0075,
+            ParameterKey(mechanism = 'rna_degredation', part_id = None, name = 'kdil'):0.001
+            
+            
+}
+
 complex_parameters = {'kb':100, 'ku':10}
+
 component_parameters = {
     #Defalt Promoter Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'kb'):100, 
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'ku'):10, 
-    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):4, 
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2, 
     
     #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
-    ParameterKey(mechanism = 'simple_transcription', part_id = None, name = "ktx"): 1e-15,
+    ParameterKey(mechanism = 'simple_transcription', part_id = None, name = "ktx"): 0.00001,
     
     #AraAraC Bound Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name] 
     ParameterKey(mechanism = 'simple_transcription', part_id = 'P_BAD_protein_AraC_input_2x_protein_Ara_input_2x', name = "ktx"): 0.05,
@@ -148,21 +159,21 @@ print('CRN Compiled')
 
 sim = GCSim(CRN)
 
-protein_lst = [
-               'protein_AmtR_degtagged']
+protein_lst = ['protein_PhlF_degtagged', 'protein_YFP_degtagged', 
+               'protein_BetI_degtagged', 'protein_SrpR_degtagged']
 
 #Plotting
-for a in [0]:
-    for b in [0]:
-        for c in [0,500]:
+for a in [0,10]:
+    for b in [0,10]:
+        for c in [0,10]:
 
-            x0 = {PhlF_construct.get_species():1, SrpR_construct.get_species():1, 
-                  BetI_construct.get_species():1, AmeR_construct.get_species():1, 
-                  HlyIIR_construct.get_species():1, YFP_construct.get_species():1, 
+            x0 = {PhlF_construct.get_species():1.5, SrpR_construct.get_species():1, 
+                  BetI_construct.get_species():1, AmeR_construct.get_species():0.25, 
+                  HlyIIR_construct.get_species():0.25, YFP_construct.get_species():1, 
                   AmtR_construct.get_species():1, Ara:c, AraC:c,
-                  IPTG:a, LacI:50, aTc:b, TetR:50}
-            timepoints = np.linspace(0, 6000, 6000)
+                  IPTG:a, LacI:10, aTc:b, TetR:10}
+            timepoints = np.linspace(0, 10000, 10000)
             R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}, Ara = {c}')
-            print(R['protein_YFP_degtagged'].iloc[-1])
+            # print(R['protein_YFP_degtagged'].iloc[-1])
             # R[['time'] + protein_lst].to_excel(f'{a}, {b}, {c}.xlsx', index=False)
             # R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}_Ara_{c}.xlsx', index=False)

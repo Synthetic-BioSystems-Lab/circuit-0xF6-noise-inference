@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
-  <model id="biocrnpyler_178595" name="biocrnpyler_178595" substanceUnits="mole" timeUnits="second" volumeUnits="litre" areaUnits="square_metre" lengthUnits="metre" extentUnits="mole">
+  <model id="biocrnpyler_385758" name="biocrnpyler_385758" substanceUnits="mole" timeUnits="second" volumeUnits="litre" areaUnits="square_metre" lengthUnits="metre" extentUnits="mole">
     <listOfUnitDefinitions>
       <unitDefinition id="square_metre">
         <listOfUnits>
@@ -18,7 +18,9 @@
       <species id="dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" name="part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" name="part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="dna_part_P_BAD_forward_part_UTR1_forward_part_AmtR_forward_part_t16_forward_" name="part_P_BAD_forward_part_UTR1_forward_part_AmtR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_part_P_AmtR_forward_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" name="part_P_AmtR_forward_part_UTR1_forward_part_Inv1_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_part_P_Inv1_forward_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" name="part_P_Inv1_forward_part_UTR1_forward_part_Inv2_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_IPTG_input" name="IPTG" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_LacI_input" name="LacI" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="complex_protein_IPTG_input_2x_protein_LacI_input_2x_" name="protein_IPTG_input_2x_protein_LacI_input_2x" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
@@ -28,38 +30,44 @@
       <species id="protein_Ara_input" name="Ara" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_AraC_input" name="AraC" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="complex_protein_AraC_input_2x_protein_Ara_input_2x_" name="protein_AraC_input_2x_protein_Ara_input_2x" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" name="complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" name="complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" name="part_UTR1_forward_part_PhlF_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_BetI_degtagged" name="BetI_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" name="complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" name="part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" name="complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" name="part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" name="part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_SrpR_degtagged" name="SrpR_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" name="complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" name="complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" name="part_UTR1_forward_part_SrpR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" name="complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" name="part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" name="complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" name="part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" name="part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_AmeR_degtagged" name="AmeR_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" name="part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_HlyIIR_degtagged" name="HlyIIR_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" name="part_UTR1_forward_part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" name="complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" name="complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" name="part_UTR1_forward_part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" name="complex_part_P_Tac_protein_LacI_input_2x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__2x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" name="complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__2x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" name="complex_part_P_Tac_protein_LacI_input_4x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__4x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" name="complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__4x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_UTR1_forward_part_AmtR_forward_part_t16_forward_" name="part_UTR1_forward_part_AmtR_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="protein_AmtR_degtagged" name="AmtR_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_Inv2_degtagged" name="Inv2_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" name="part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_PhlF_degtagged" name="PhlF_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" name="part_UTR1_forward_part_Inv1_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_AmtR_degtagged" name="AmtR_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_Inv1_forward_part_t16_forward_" name="complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_Inv1_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" name="part_UTR1_forward_part_Inv2_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_Inv1_degtagged" name="Inv1_degtagged" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_P_Inv1_protein_Inv1_degtagged_4x_forward__part_UTR1_forward_part_Inv2_forward_part_t16_forward_" name="complex_part_P_Inv1_protein_Inv1_degtagged_4x_forward__part_UTR1_forward_part_Inv2_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_PhlF_degtagged" name="PhlF" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_SrpR_degtagged" name="SrpR" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_BetI_degtagged" name="BetI" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
@@ -67,6 +75,8 @@
       <species id="protein_HlyIIR_degtagged" name="HlyIIR" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_AmtR_degtagged" name="AmtR" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_YFP_degtagged" name="YFP" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_Inv1_degtagged" name="Inv1" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_Inv2_degtagged" name="Inv2" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
     </listOfSpecies>
     <listOfParameters>
       <parameter id="kb__" value="100" constant="true"/>
@@ -74,15 +84,17 @@
       <parameter id="ktx_P_BetI_leak_simple_transcription" value="0.05" constant="true"/>
       <parameter id="kb__one_step_cooperative_binding" value="100" constant="true"/>
       <parameter id="ku__one_step_cooperative_binding" value="10" constant="true"/>
-      <parameter id="ktx__simple_transcription" value="0.001" constant="true"/>
+      <parameter id="ktx__simple_transcription" value="1e-15" constant="true"/>
       <parameter id="ktx_P_SrpR_leak_simple_transcription" value="0.05" constant="true"/>
       <parameter id="ktx_P_Tet_leak_simple_transcription" value="0.05" constant="true"/>
       <parameter id="ktx_P_Tac_leak_simple_transcription" value="0.05" constant="true"/>
       <parameter id="ktx_P_AmeR_leak_simple_transcription" value="0.05" constant="true"/>
       <parameter id="ktx_P_HlyIIR_leak_simple_transcription" value="0.05" constant="true"/>
       <parameter id="ktx_P_BAD_protein_AraC_input_2x_protein_Ara_input_2x_simple_transcription" value="0.05" constant="true"/>
-      <parameter id="ktx_P_AmtR_leak_simple_transcription" value="0.05" constant="true"/>
+      <parameter id="ktx_P_Inv2_leak_simple_transcription" value="0.05" constant="true"/>
       <parameter id="ktx_P_PhlF_leak_simple_transcription" value="0.05" constant="true"/>
+      <parameter id="ktx_P_AmtR_leak_simple_transcription" value="0.05" constant="true"/>
+      <parameter id="ktx_P_Inv1_leak_simple_transcription" value="0.05" constant="true"/>
       <parameter id="ktl__" value="0.05" constant="true"/>
       <parameter id="kdil__" value="0.0075" constant="true"/>
     </listOfParameters>
@@ -245,10 +257,10 @@
           <PropensityType> k=ktx_P_BetI_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -256,7 +268,7 @@
             <apply>
               <times/>
               <ci> ktx_P_BetI_leak_simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -266,11 +278,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_BetI_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_BetI_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -280,9 +292,9 @@
               <apply>
                 <power/>
                 <ci> protein_BetI_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -292,18 +304,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_BetI_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_BetI_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -313,10 +325,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -324,7 +336,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -334,10 +346,10 @@
           <PropensityType> k=ktx_P_SrpR_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -345,7 +357,7 @@
             <apply>
               <times/>
               <ci> ktx_P_SrpR_leak_simple_transcription </ci>
-              <ci> ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -355,11 +367,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_SrpR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_SrpR_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -369,9 +381,9 @@
               <apply>
                 <power/>
                 <ci> protein_SrpR_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -381,18 +393,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_SrpR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_SrpR_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -402,10 +414,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -413,7 +425,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -444,11 +456,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_SrpR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_SrpR_degtagged" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -458,7 +470,7 @@
               <apply>
                 <power/>
                 <ci> protein_SrpR_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
               <ci> dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
@@ -470,10 +482,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_SrpR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_SrpR_degtagged" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -481,7 +493,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -491,10 +503,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -502,7 +514,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_2x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -533,11 +545,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_BetI_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_BetI_degtagged" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -547,7 +559,7 @@
               <apply>
                 <power/>
                 <ci> protein_BetI_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
               <ci> dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
@@ -559,10 +571,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_BetI_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_BetI_degtagged" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -570,7 +582,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -580,10 +592,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_PhlF_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -591,7 +603,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -601,10 +613,10 @@
           <PropensityType> k=ktx_P_Tet_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -612,7 +624,7 @@
             <apply>
               <times/>
               <ci> ktx_P_Tet_leak_simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -622,11 +634,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_TetR_input" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_TetR_input" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -636,9 +648,9 @@
               <apply>
                 <power/>
                 <ci> protein_TetR_input </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -648,18 +660,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_TetR_input" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_TetR_input" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -669,10 +681,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -680,7 +692,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -690,10 +702,10 @@
           <PropensityType> k=ktx_P_Tac_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -701,7 +713,7 @@
             <apply>
               <times/>
               <ci> ktx_P_Tac_leak_simple_transcription </ci>
-              <ci> ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -711,11 +723,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_LacI_input" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_LacI_input" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -725,9 +737,9 @@
               <apply>
                 <power/>
                 <ci> protein_LacI_input </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -737,18 +749,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_LacI_input" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_LacI_input" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -758,10 +770,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -769,7 +781,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -800,11 +812,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_LacI_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_LacI_input" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -814,7 +826,7 @@
               <apply>
                 <power/>
                 <ci> protein_LacI_input </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
               <ci> dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
@@ -826,10 +838,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_LacI_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_LacI_input" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -837,7 +849,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -847,10 +859,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -858,7 +870,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -889,11 +901,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_TetR_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_TetR_input" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -903,7 +915,7 @@
               <apply>
                 <power/>
                 <ci> protein_TetR_input </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
               <ci> dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
@@ -915,10 +927,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_TetR_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_TetR_input" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_Tac_forward_part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -926,7 +938,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -936,10 +948,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_SrpR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -947,7 +959,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -957,10 +969,10 @@
           <PropensityType> k=ktx_P_AmeR_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -968,7 +980,7 @@
             <apply>
               <times/>
               <ci> ktx_P_AmeR_leak_simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -978,11 +990,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -992,9 +1004,9 @@
               <apply>
                 <power/>
                 <ci> protein_AmeR_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1004,18 +1016,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1025,10 +1037,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1036,7 +1048,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1046,10 +1058,10 @@
           <PropensityType> k=ktx_P_HlyIIR_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1057,7 +1069,7 @@
             <apply>
               <times/>
               <ci> ktx_P_HlyIIR_leak_simple_transcription </ci>
-              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1067,11 +1079,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1081,9 +1093,9 @@
               <apply>
                 <power/>
                 <ci> protein_HlyIIR_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1093,18 +1105,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1114,10 +1126,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1125,7 +1137,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1156,11 +1168,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1170,7 +1182,7 @@
               <apply>
                 <power/>
                 <ci> protein_HlyIIR_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
               <ci> dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
@@ -1182,10 +1194,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_HlyIIR_degtagged" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1193,7 +1205,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1203,10 +1215,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1214,7 +1226,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1245,11 +1257,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1259,7 +1271,7 @@
               <apply>
                 <power/>
                 <ci> protein_AmeR_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
               <ci> dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
@@ -1271,10 +1283,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_AmeR_degtagged" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_AmeR_degtagged" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1282,7 +1294,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1292,10 +1304,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_BetI_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1303,7 +1315,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_2x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1334,11 +1346,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_TetR_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_TetR_input" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1348,7 +1360,7 @@
               <apply>
                 <power/>
                 <ci> protein_TetR_input </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
               <ci> dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
             </apply>
@@ -1360,10 +1372,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_TetR_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_TetR_input" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_Tet_forward_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1371,7 +1383,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1381,10 +1393,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_AmeR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1392,7 +1404,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_Tet_protein_TetR_input_2x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1423,11 +1435,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_LacI_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_LacI_input" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1437,7 +1449,7 @@
               <apply>
                 <power/>
                 <ci> protein_LacI_input </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
               <ci> dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
             </apply>
@@ -1449,10 +1461,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_LacI_input" stoichiometry="2" constant="false"/>
+          <speciesReference species="protein_LacI_input" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_Tac_forward_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1460,7 +1472,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1470,10 +1482,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1481,7 +1493,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_2x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1491,11 +1503,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="complex_protein_AraC_input_2x_protein_Ara_input_2x_" stoichiometry="2" constant="false"/>
+          <speciesReference species="complex_protein_AraC_input_2x_protein_Ara_input_2x_" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_BAD_forward_part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__2x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__4x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1505,7 +1517,7 @@
               <apply>
                 <power/>
                 <ci> complex_protein_AraC_input_2x_protein_Ara_input_2x_ </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
               <ci> dna_part_P_BAD_forward_part_UTR1_forward_part_AmtR_forward_part_t16_forward_ </ci>
             </apply>
@@ -1517,10 +1529,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__2x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__4x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="complex_protein_AraC_input_2x_protein_Ara_input_2x_" stoichiometry="2" constant="false"/>
+          <speciesReference species="complex_protein_AraC_input_2x_protein_Ara_input_2x_" stoichiometry="4" constant="false"/>
           <speciesReference species="dna_part_P_BAD_forward_part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1528,7 +1540,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__2x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__4x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1538,10 +1550,10 @@
           <PropensityType> k=ktx_P_BAD_protein_AraC_input_2x_protein_Ara_input_2x_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__2x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__4x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__2x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__4x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_AmtR_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1549,28 +1561,28 @@
             <apply>
               <times/>
               <ci> ktx_P_BAD_protein_AraC_input_2x_protein_Ara_input_2x_simple_transcription </ci>
-              <ci> ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__2x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_complex_protein_AraC_input_2x_protein_Ara_input_2x__4x_part_P_BAD_forward__part_UTR1_forward_part_AmtR_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction id="r47" name="r47" reversible="false">
         <annotation>
-          <PropensityType> k=ktx_P_AmtR_leak_simple_transcription type=massaction</PropensityType>
+          <PropensityType> k=ktx_P_Inv2_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> ktx_P_AmtR_leak_simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ktx_P_Inv2_leak_simple_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1580,11 +1592,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_AmtR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Inv2_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1593,10 +1605,10 @@
               <ci> kb__one_step_cooperative_binding </ci>
               <apply>
                 <power/>
-                <ci> protein_AmtR_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <ci> protein_Inv2_degtagged </ci>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1606,18 +1618,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_AmtR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Inv2_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1627,10 +1639,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1638,7 +1650,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1648,18 +1660,18 @@
           <PropensityType> k=ktx_P_PhlF_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
-          <speciesReference species="rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ktx_P_PhlF_leak_simple_transcription </ci>
-              <ci> ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1669,11 +1681,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_PhlF_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_PhlF_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1683,9 +1695,9 @@
               <apply>
                 <power/>
                 <ci> protein_PhlF_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1695,18 +1707,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_PhlF_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_PhlF_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1716,18 +1728,18 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
-          <speciesReference species="rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1737,18 +1749,18 @@
           <PropensityType> k=ktx_P_PhlF_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
-          <speciesReference species="rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ktx_P_PhlF_leak_simple_transcription </ci>
-              <ci> dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1758,11 +1770,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_PhlF_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_PhlF_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1772,9 +1784,9 @@
               <apply>
                 <power/>
                 <ci> protein_PhlF_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1784,18 +1796,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_PhlF_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_PhlF_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1805,39 +1817,39 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
-          <speciesReference species="rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_2x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction id="r56" name="r56" reversible="false">
         <annotation>
-          <PropensityType> k=ktx_P_AmtR_leak_simple_transcription type=massaction</PropensityType>
+          <PropensityType> k=ktx_P_Inv2_leak_simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> ktx_P_AmtR_leak_simple_transcription </ci>
-              <ci> dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ktx_P_Inv2_leak_simple_transcription </ci>
+              <ci> dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1847,11 +1859,11 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_AmtR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Inv2_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1860,10 +1872,10 @@
               <ci> kb__one_step_cooperative_binding </ci>
               <apply>
                 <power/>
-                <ci> protein_AmtR_degtagged </ci>
-                <cn type="integer"> 2 </cn>
+                <ci> protein_Inv2_degtagged </ci>
+                <cn type="integer"> 4 </cn>
               </apply>
-              <ci> dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1873,18 +1885,18 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_AmtR_degtagged" stoichiometry="2" constant="false"/>
-          <speciesReference species="dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Inv2_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="dna_part_P_PhlF_forward_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -1894,10 +1906,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -1905,12 +1917,190 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_2x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_part_P_PhlF_forward_complex_part_P_Inv2_protein_Inv2_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
       <reaction id="r59" name="r59" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_AmtR_leak_simple_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_part_P_AmtR_forward_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_AmtR_forward_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_AmtR_leak_simple_transcription </ci>
+              <ci> dna_part_P_AmtR_forward_part_UTR1_forward_part_Inv1_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r60" name="r60" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_AmtR_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="dna_part_P_AmtR_forward_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_AmtR_degtagged </ci>
+                <cn type="integer"> 4 </cn>
+              </apply>
+              <ci> dna_part_P_AmtR_forward_part_UTR1_forward_part_Inv1_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r60rev" name="r60rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_AmtR_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="dna_part_P_AmtR_forward_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_Inv1_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r61" name="r61" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__simple_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_Inv1_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r62" name="r62" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx_P_Inv1_leak_simple_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_part_P_Inv1_forward_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_part_P_Inv1_forward_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx_P_Inv1_leak_simple_transcription </ci>
+              <ci> dna_part_P_Inv1_forward_part_UTR1_forward_part_Inv2_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r63" name="r63" reversible="false">
+        <annotation>
+          <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_Inv1_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="dna_part_P_Inv1_forward_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_Inv1_protein_Inv1_degtagged_4x_forward__part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kb__one_step_cooperative_binding </ci>
+              <apply>
+                <power/>
+                <ci> protein_Inv1_degtagged </ci>
+                <cn type="integer"> 4 </cn>
+              </apply>
+              <ci> dna_part_P_Inv1_forward_part_UTR1_forward_part_Inv2_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r63rev" name="r63rev" reversible="false">
+        <annotation>
+          <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_Inv1_protein_Inv1_degtagged_4x_forward__part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="protein_Inv1_degtagged" stoichiometry="4" constant="false"/>
+          <speciesReference species="dna_part_P_Inv1_forward_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ku__one_step_cooperative_binding </ci>
+              <ci> ordered_polymer_complex_part_P_Inv1_protein_Inv1_degtagged_4x_forward__part_UTR1_forward_part_Inv2_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r64" name="r64" reversible="false">
+        <annotation>
+          <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="ordered_polymer_complex_part_P_Inv1_protein_Inv1_degtagged_4x_forward__part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ordered_polymer_complex_part_P_Inv1_protein_Inv1_degtagged_4x_forward__part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktx__simple_transcription </ci>
+              <ci> ordered_polymer_complex_part_P_Inv1_protein_Inv1_degtagged_4x_forward__part_UTR1_forward_part_Inv2_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r65" name="r65" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -1931,7 +2121,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r60" name="r60" reversible="false">
+      <reaction id="r66" name="r66" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -1952,7 +2142,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r61" name="r61" reversible="false">
+      <reaction id="r67" name="r67" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -1973,7 +2163,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r62" name="r62" reversible="false">
+      <reaction id="r68" name="r68" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -1994,7 +2184,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r63" name="r63" reversible="false">
+      <reaction id="r69" name="r69" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -2015,7 +2205,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r64" name="r64" reversible="false">
+      <reaction id="r70" name="r70" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -2036,7 +2226,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r65" name="r65" reversible="false">
+      <reaction id="r71" name="r71" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -2057,7 +2247,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r66" name="r66" reversible="false">
+      <reaction id="r72" name="r72" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -2078,7 +2268,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r67" name="r67" reversible="false">
+      <reaction id="r73" name="r73" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -2099,15 +2289,15 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r68" name="r68" reversible="false">
+      <reaction id="r74" name="r74" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="protein_YFP_degtagged" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -2115,12 +2305,12 @@
             <apply>
               <times/>
               <ci> ktl__ </ci>
-              <ci> rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r69" name="r69" reversible="false">
+      <reaction id="r75" name="r75" reversible="false">
         <annotation>
           <PropensityType> k=ktl__ type=massaction</PropensityType>
         </annotation>
@@ -2141,7 +2331,49 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r70" name="r70" reversible="false">
+      <reaction id="r76" name="r76" reversible="false">
+        <annotation>
+          <PropensityType> k=ktl__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Inv1_degtagged" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktl__ </ci>
+              <ci> rna_part_UTR1_forward_part_Inv1_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r77" name="r77" reversible="false">
+        <annotation>
+          <PropensityType> k=ktl__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_Inv2_degtagged" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> ktl__ </ci>
+              <ci> rna_part_UTR1_forward_part_Inv2_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r78" name="r78" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2158,7 +2390,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r71" name="r71" reversible="false">
+      <reaction id="r79" name="r79" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2175,7 +2407,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r72" name="r72" reversible="false">
+      <reaction id="r80" name="r80" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2192,7 +2424,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r73" name="r73" reversible="false">
+      <reaction id="r81" name="r81" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2209,7 +2441,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r74" name="r74" reversible="false">
+      <reaction id="r82" name="r82" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2226,7 +2458,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r75" name="r75" reversible="false">
+      <reaction id="r83" name="r83" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2243,7 +2475,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r76" name="r76" reversible="false">
+      <reaction id="r84" name="r84" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2260,7 +2492,41 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r77" name="r77" reversible="false">
+      <reaction id="r85" name="r85" reversible="false">
+        <annotation>
+          <PropensityType> k=kdil__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_Inv1_degtagged" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdil__ </ci>
+              <ci> protein_Inv1_degtagged </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r86" name="r86" reversible="false">
+        <annotation>
+          <PropensityType> k=kdil__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="protein_Inv2_degtagged" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdil__ </ci>
+              <ci> protein_Inv2_degtagged </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r87" name="r87" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2277,7 +2543,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r78" name="r78" reversible="false">
+      <reaction id="r88" name="r88" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2294,7 +2560,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r79" name="r79" reversible="false">
+      <reaction id="r89" name="r89" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2311,7 +2577,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r80" name="r80" reversible="false">
+      <reaction id="r90" name="r90" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2328,7 +2594,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r81" name="r81" reversible="false">
+      <reaction id="r91" name="r91" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2345,7 +2611,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r82" name="r82" reversible="false">
+      <reaction id="r92" name="r92" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2362,7 +2628,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r83" name="r83" reversible="false">
+      <reaction id="r93" name="r93" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2379,7 +2645,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r84" name="r84" reversible="false">
+      <reaction id="r94" name="r94" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2396,7 +2662,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r85" name="r85" reversible="false">
+      <reaction id="r95" name="r95" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2413,7 +2679,7 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r86" name="r86" reversible="false">
+      <reaction id="r96" name="r96" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
@@ -2430,19 +2696,53 @@
           </math>
         </kineticLaw>
       </reaction>
-      <reaction id="r87" name="r87" reversible="false">
+      <reaction id="r97" name="r97" reversible="false">
         <annotation>
           <PropensityType> k=kdil__ type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> kdil__ </ci>
-              <ci> rna_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+              <ci> rna_part_P_Inv2_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r98" name="r98" reversible="false">
+        <annotation>
+          <PropensityType> k=kdil__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv1_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdil__ </ci>
+              <ci> rna_part_UTR1_forward_part_Inv1_forward_part_t16_forward_ </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r99" name="r99" reversible="false">
+        <annotation>
+          <PropensityType> k=kdil__ type=massaction</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="rna_part_UTR1_forward_part_Inv2_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kdil__ </ci>
+              <ci> rna_part_UTR1_forward_part_Inv2_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>

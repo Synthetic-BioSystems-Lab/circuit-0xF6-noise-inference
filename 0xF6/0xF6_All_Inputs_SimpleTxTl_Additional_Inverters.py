@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Aug 12 19:42:36 2025
+Created on Fri Aug 22 16:45:43 2025
 
 @author: zacha
 """
@@ -41,6 +41,8 @@ component_parameters = {
     ParameterKey(mechanism = 'simple_transcription', part_id = 'P_HlyIIR_leak', name = "ktx"): 0.05,
     ParameterKey(mechanism = 'simple_transcription', part_id = 'P_AmeR_leak', name = "ktx"): 0.05, 
     ParameterKey(mechanism = 'simple_transcription', part_id = 'P_PhlF_leak', name = "ktx"): 0.05,
+    ParameterKey(mechanism = 'simple_transcription', part_id = 'P_Inv1_leak', name = "ktx"): 0.05,
+    ParameterKey(mechanism = 'simple_transcription', part_id = 'P_Inv2_leak', name = "ktx"): 0.05,
     ParameterKey(mechanism = 'simple_transcription', part_id = 'P_AmtR_leak', name = "ktx"):0.05 
     
 }
@@ -83,6 +85,12 @@ CDS_PhlF.protein = Species('PhlF', material_type='protein', attributes=['degtagg
 CDS_AmtR = CDS('AmtR', 'AmtR')
 CDS_AmtR.protein = Species('AmtR', material_type='protein', attributes=['degtagged'])
 
+CDS_Inv1 = CDS('Inv1', 'Inv1')
+CDS_Inv1.protein = Species('Inv1', material_type='protein', attributes=['degtagged'])
+
+CDS_Inv2 = CDS('Inv2', 'Inv2')
+CDS_Inv2.protein = Species('Inv2', material_type='protein', attributes=['degtagged'])
+
 CDS_YFP = CDS('YFP', 'YFP')
 CDS_YFP.protein = Species('YFP', material_type='protein', attributes=['degtagged'])
 
@@ -105,6 +113,10 @@ P_AmeR = RegulatedPromoter('P_AmeR',  regulators = ['AmeR_degtagged'], leak=True
                           parameters = component_parameters)
 P_AmtR = RegulatedPromoter('P_AmtR', regulators = ['AmtR_degtagged'], leak=True, 
                           parameters = component_parameters)
+P_Inv1 = RegulatedPromoter('P_Inv1', regulators = ['Inv1_degtagged'], leak=True, 
+                          parameters = component_parameters)
+P_Inv2 = RegulatedPromoter('P_Inv2', regulators = ['Inv2_degtagged'], leak=True, 
+                          parameters = component_parameters)
 P_PhlF = RegulatedPromoter('P_PhlF',  regulators = ['PhlF_degtagged'], leak=True, 
                           parameters = component_parameters)
 
@@ -122,7 +134,11 @@ HlyIIR_construct = DNA_construct([P_Tac, rbs, CDS_HlyIIR, t16])
 
 AmtR_construct = DNA_construct([P_BAD, rbs, CDS_AmtR, t16])
 
-YFP_construct = DNA_construct([P_PhlF, P_AmtR, rbs, CDS_YFP, t16])
+Inv1_construct = DNA_construct([P_AmtR, rbs, CDS_Inv1, t16])
+
+Inv2_construct = DNA_construct([P_Inv1, rbs, CDS_Inv2, t16])
+
+YFP_construct = DNA_construct([P_PhlF, P_Inv2, rbs, CDS_YFP, t16])
 
 #Mixture and CRN creation
 
@@ -136,8 +152,8 @@ global_mechanisms = {"dilution":dilution_mechanism}
 
 M = SimpleTxTlExtract(name="txtl", parameters = parameters, global_mechanisms = global_mechanisms,
                       components=[PhlF_construct, SrpR_construct, BetI_construct, AmeR_construct, 
-                                  HlyIIR_construct, AmtR_construct, YFP_construct, IPTG_LacI, 
-                                  aTc_TetR, AraAraC])
+                                  HlyIIR_construct, AmtR_construct, YFP_construct, Inv1_construct, 
+                                  Inv2_construct, IPTG_LacI, aTc_TetR, AraAraC])
 CRN = M.compile_crn()
 # CRN.write_sbml_file('Circuit_0xF6_AB_only_sbml.xml') #saving CRN as sbml
 
@@ -149,17 +165,19 @@ print('CRN Compiled')
 sim = GCSim(CRN)
 
 protein_lst = [
-               'protein_AmtR_degtagged']
+    'protein_YFP_degtagged'
+               ]
 
 #Plotting
-for a in [0]:
-    for b in [0]:
+for a in [0,500]:
+    for b in [0,500]:
         for c in [0,500]:
 
             x0 = {PhlF_construct.get_species():1, SrpR_construct.get_species():1, 
                   BetI_construct.get_species():1, AmeR_construct.get_species():1, 
                   HlyIIR_construct.get_species():1, YFP_construct.get_species():1, 
-                  AmtR_construct.get_species():1, Ara:c, AraC:c,
+                  AmtR_construct.get_species():1, Inv1_construct.get_species():1, 
+                  Inv2_construct.get_species():1, Ara:c, AraC:c,
                   IPTG:a, LacI:50, aTc:b, TetR:50}
             timepoints = np.linspace(0, 6000, 6000)
             R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}, Ara = {c}')

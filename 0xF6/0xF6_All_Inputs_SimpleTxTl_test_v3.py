@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Aug 12 19:42:36 2025
+Created on Wed Aug 20 16:50:33 2025
 
 @author: zacha
 """
@@ -18,11 +18,12 @@ from GCSim import GCSim
 
 parameters={"cooperativity":2,"kb":100, "ku":10, "ktx":.05, "ktl":.05, "kdeg":0.001, "kdil":0.0075}
 complex_parameters = {'kb':100, 'ku':10}
+hill_parameters = {"k":1.0, "n":4, "K":20, "kleak":.01}
 component_parameters = {
     #Defalt Promoter Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'kb'):100, 
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'ku'):10, 
-    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):4, 
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2, 
     
     #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'simple_transcription', part_id = None, name = "ktx"): 1e-15,
@@ -149,11 +150,12 @@ print('CRN Compiled')
 sim = GCSim(CRN)
 
 protein_lst = [
-               'protein_AmtR_degtagged']
+               'protein_YFP_degtagged', 'protein_BetI_degtagged', 
+               'protein_SrpR_degtagged', 'protein_PhlF_degtagged']
 
 #Plotting
-for a in [0]:
-    for b in [0]:
+for a in [0,500]:
+    for b in [0,500]:
         for c in [0,500]:
 
             x0 = {PhlF_construct.get_species():1, SrpR_construct.get_species():1, 
