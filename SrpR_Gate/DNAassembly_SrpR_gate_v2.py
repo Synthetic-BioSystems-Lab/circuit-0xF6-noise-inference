@@ -78,5 +78,5 @@ for a in [0, 10]:
         x0 = {SrpR_assembly1.dna:10, SrpR_assembly2.dna:10, LacI:10, TetR:10, IPTG:a, aTc:b, protease:10}
         timepoints = np.linspace(0, 6000, 1000)
         R = sim.basicsim(x0, timepoints, 
-                         ['SrpR_degtagged'], 
-                         title = f'IPTG = {a}, aTc = {b}')
+                          ['SrpR_degtagged'], 
+                          title = f'IPTG = {a}, aTc = {b}')

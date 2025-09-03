@@ -32,7 +32,6 @@ component_parameters = {
     
     #Leak Parameters for transcription
     #These regulate expression of an unbound promoter
-    ParameterKey(mechanism = 'simple_transcription', part_id = 'P_BAD_leak', name = "ktx"): 0.05,
     ParameterKey(mechanism = 'simple_transcription', part_id = 'P_Tac_leak', name = "ktx"): 0.05, 
     ParameterKey(mechanism = 'simple_transcription', part_id = 'P_Tet_leak', name = "ktx"): 0.05,
     
@@ -59,7 +58,7 @@ Ara = Species('Ara',  material_type='protein', attributes=['input']) #Input C
 AraC = Species('AraC',  material_type='protein', attributes=['input'])
 AraAraC = ChemicalComplex([Ara, Ara, AraC, AraC], parameters = complex_parameters)
 
-protease = Species('protease')
+# protease = Species('protease')
 
 #DNA parts
 
@@ -92,7 +91,7 @@ P_Tac = RegulatedPromoter('P_Tac',  regulators = [LacI], leak=True,
                           parameters = component_parameters)
 P_Tet = RegulatedPromoter('P_Tet', regulators = [TetR], leak=True, 
                           parameters = component_parameters)
-P_BAD = RegulatedPromoter('P_BAD', regulators = [AraAraC], leak=False,
+P_BAD = RegulatedPromoter('P_BAD', regulators = [AraAraC], leak=True,
                           parameters = component_parameters)
 
 P_SrpR = RegulatedPromoter('P_SrpR',  regulators = ['SrpR_degtagged'], leak=True, 
@@ -148,21 +147,20 @@ print('CRN Compiled')
 
 sim = GCSim(CRN)
 
-protein_lst = [
-               'protein_AmtR_degtagged']
+protein_lst = ['protein_PhlF_degtagged', 'protein_YFP_degtagged', 'protein_AmtR_degtagged']
 
 #Plotting
-for a in [0]:
-    for b in [0]:
-        for c in [0,500]:
+for a in [0,80]:
+    for b in [0,80]:
+        for c in [0,80]:
 
             x0 = {PhlF_construct.get_species():1, SrpR_construct.get_species():1, 
                   BetI_construct.get_species():1, AmeR_construct.get_species():1, 
                   HlyIIR_construct.get_species():1, YFP_construct.get_species():1, 
                   AmtR_construct.get_species():1, Ara:c, AraC:c,
                   IPTG:a, LacI:50, aTc:b, TetR:50}
-            timepoints = np.linspace(0, 6000, 6000)
+            timepoints = np.linspace(0, 10000, 10000)
             R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}, Ara = {c}')
             print(R['protein_YFP_degtagged'].iloc[-1])
             # R[['time'] + protein_lst].to_excel(f'{a}, {b}, {c}.xlsx', index=False)
-            # R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}_Ara_{c}.xlsx', index=False)
+            R.to_excel(f'simulation_data/IPTG_{a}_aTc_{b}_Ara_{c}.xlsx', index=False)

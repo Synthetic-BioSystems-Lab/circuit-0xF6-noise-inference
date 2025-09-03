@@ -164,14 +164,13 @@ print('CRN Compiled')
 
 sim = GCSim(CRN)
 
-protein_lst = [
-    'protein_YFP_degtagged'
-               ]
+protein_lst = ['protein_PhlF_degtagged', 'protein_YFP_degtagged', 
+               'protein_Inv2_degtagged']
 
 #Plotting
-for a in [0,500]:
-    for b in [0,500]:
-        for c in [0,500]:
+for a in [0,80]:
+    for b in [0,80]:
+        for c in [0,80]:
 
             x0 = {PhlF_construct.get_species():1, SrpR_construct.get_species():1, 
                   BetI_construct.get_species():1, AmeR_construct.get_species():1, 
@@ -183,4 +182,4 @@ for a in [0,500]:
             R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}, Ara = {c}')
             print(R['protein_YFP_degtagged'].iloc[-1])
             # R[['time'] + protein_lst].to_excel(f'{a}, {b}, {c}.xlsx', index=False)
-            # R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}_Ara_{c}.xlsx', index=False)
+            # R.to_excel(f'simulation_data/IPTG_{a}_aTc_{b}_Ara_{c}.xlsx', index=False)

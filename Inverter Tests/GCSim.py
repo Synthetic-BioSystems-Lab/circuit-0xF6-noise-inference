@@ -113,7 +113,7 @@ class GCSim:
             y_lst.append(R[output_protein][len(timepoints)-1])
         
         if loglog == True:
-            plt.xlim(1e-3, 1e3)   
+            plt.xlim(1e-2, 1e4)   
             plt.ylim(1e-2, 1e2) 
             plt.loglog(x_lst, y_lst)
         else:

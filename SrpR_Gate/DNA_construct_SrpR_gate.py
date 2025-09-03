@@ -86,22 +86,24 @@ CRN = M.compile_crn()
 with open('temp_CRN_EQNs.txt', 'w') as f:
     f.write(CRN.pretty_print(show_rates = True, show_keys = True))
 
-num_val = 5
-max_conc = 10
-x0 = {"protein_RNAP":0.5, "protein_Ribo":50., 'protein_RNAase':15, 
-      SrpR_construct.get_species():1, LacI:10, TetR:10}
-timepoints = np.linspace(0, 1000, 1000)
+# num_val = 5
+# max_conc = 10
+# x0 = {"protein_RNAP":0.5, "protein_Ribo":50., 'protein_RNAase':15, 
+#       SrpR_construct.get_species():1, LacI:10, TetR:10}
+# timepoints = np.linspace(0, 1000, 1000)
 
-sim = GCSim(CRN)
+# sim = GCSim(CRN)
 
-sim.heatmap(x0, timepoints, max_conc, num_val, IPTG, aTc,'protein_SrpR_degtagged', title = 'SrpR Gate Output', 
-            xlabel = 'aTc', ylabel = 'IPTG')
+# sim.heatmap(x0, timepoints, max_conc, num_val, IPTG, aTc,'protein_SrpR_degtagged', title = 'SrpR Gate Output', 
+#             xlabel = 'aTc', ylabel = 'IPTG')
 
-sim.inputswitch(x0, 5000, 'protein_SrpR_degtagged', IPTG, aTc, 10, LacI, TetR, IPTG_LacI, aTc_TetR)
+# sim.inputswitch(x0, 5000, 'protein_SrpR_degtagged', IPTG, aTc, 10, LacI, TetR, IPTG_LacI, aTc_TetR)
 
-for a in [0, 10]:
-    for b in [0, 10]:
-        x0 = {SrpR_construct.get_species():1, LacI:10, TetR:10, IPTG:a, aTc:b,
-              "protein_RNAP":0.5, "protein_Ribo":50., 'protein_RNAase':15}
-        timepoints = np.linspace(0, 21000, 1000)
-        R = sim.basicsim(x0, timepoints, ['protein_SrpR_degtagged'], title = f'IPTG = {a}, aTc = {b}')
+# for a in [0, 10]:
+#     for b in [0, 10]:
+#         x0 = {SrpR_construct.get_species():1, LacI:10, TetR:10, IPTG:a, aTc:b,
+#               "protein_RNAP":0.5, "protein_Ribo":50., 'protein_RNAase':15}
+#         timepoints = np.linspace(0, 21000, 1000)
+#         R = sim.basicsim(x0, timepoints, ['protein_SrpR_degtagged'], title = f'IPTG = {a}, aTc = {b}')
+        
+#         R.to_excel(f'simulation_results_IPTG_{a}_aTc_{b}.xlsx', index=False)

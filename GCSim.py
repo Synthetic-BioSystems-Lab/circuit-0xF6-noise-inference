@@ -16,7 +16,8 @@ class GCSim:
     def __init__(self, CRN):
         self.CRN = CRN
         
-    def basicsim(self, x0, timepoints, protein_lst, title = '', xlabel = '', ylabel = ''):
+    def basicsim(self, x0, timepoints, protein_lst, title = '', xlabel = '', 
+                 ylabel = ''):
         
         plt.figure()
         
@@ -31,7 +32,7 @@ class GCSim:
         plt.ylabel(ylabel)
         
         plt.show()
-        
+
         return R
         
     def heatmap(self, x0, timepoints, max_conc, num_val, input_a, input_b, output_protein, title = '', 
@@ -94,6 +95,30 @@ class GCSim:
         plt.axvspan(period*3, period*4, color='gray', alpha=0.01, 
                     label=f'{input_a} = {input_high}, {input_b} = {input_high}')
         plt.legend()
+        plt.title(title)
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        
+        plt.show()
+        
+    def inout(self, x0, timepoints, x_lst, input_protein, output_protein, loglog = False, 
+              title = '', xlabel = 'input protein', ylabel = 'output protein'):
+        
+        plt.figure()
+        y_lst = []
+        
+        for i in range(len(x_lst)):
+            x0[input_protein] = x_lst[i]
+            R = self.CRN.simulate_with_bioscrape_via_sbml(timepoints, initial_condition_dict = x0, safe=True)
+            y_lst.append(R[output_protein][len(timepoints)-1])
+        
+        if loglog == True:
+            plt.xlim(1e-2, 1e4)   
+            plt.ylim(1e-2, 1e2) 
+            plt.loglog(x_lst, y_lst)
+        else:
+            plt.plot(x_lst, y_lst)
+        
         plt.title(title)
         plt.xlabel(xlabel)
         plt.ylabel(ylabel)

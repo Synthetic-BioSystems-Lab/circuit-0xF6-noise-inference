@@ -100,3 +100,27 @@ class GCSim:
         plt.ylabel(ylabel)
         
         plt.show()
+        
+    def inout(self, x0, timepoints, x_lst, input_protein, output_protein, loglog = False, 
+              title = '', xlabel = 'input protein', ylabel = 'output protein'):
+        
+        plt.figure()
+        y_lst = []
+        
+        for i in range(len(x_lst)):
+            x0[input_protein] = x_lst[i]
+            R = self.CRN.simulate_with_bioscrape_via_sbml(timepoints, initial_condition_dict = x0, safe=True)
+            y_lst.append(R[output_protein][len(timepoints)-1])
+        
+        if loglog == True:
+            plt.xlim(1e-2, 1e4)   
+            plt.ylim(1e-2, 1e2) 
+            plt.loglog(x_lst, y_lst)
+        else:
+            plt.plot(x_lst, y_lst)
+        
+        plt.title(title)
+        plt.xlabel(xlabel)
+        plt.ylabel(ylabel)
+        
+        plt.show()

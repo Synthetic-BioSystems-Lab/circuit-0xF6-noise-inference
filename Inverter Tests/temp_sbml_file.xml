@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
-  <model id="biocrnpyler_746379" name="biocrnpyler_746379" substanceUnits="mole" timeUnits="second" volumeUnits="litre" areaUnits="square_metre" lengthUnits="metre" extentUnits="mole">
+  <model id="biocrnpyler_637833" name="biocrnpyler_637833" substanceUnits="mole" timeUnits="second" volumeUnits="litre" areaUnits="square_metre" lengthUnits="metre" extentUnits="mole">
     <listOfUnitDefinitions>
       <unitDefinition id="square_metre">
         <listOfUnits>
@@ -15,7 +15,7 @@
       <species id="dna_part_Promoter_forward_part_UTR1_forward_part_A_forward_part_t16_forward_" name="part_Promoter_forward_part_UTR1_forward_part_A_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="rna_part_UTR1_forward_part_A_forward_part_t16_forward_" name="part_UTR1_forward_part_A_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_repressor_input" name="repressor" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-      <species id="ordered_polymer_complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" name="complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" name="complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
       <species id="protein_A_degtagged" name="A" compartment="default" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
     </listOfSpecies>
     <listOfParameters>
@@ -53,18 +53,22 @@
           <PropensityType> k=kb__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="protein_repressor_input" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_repressor_input" stoichiometry="2" constant="false"/>
           <speciesReference species="dna_part_Promoter_forward_part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
               <ci> kb__one_step_cooperative_binding </ci>
-              <ci> protein_repressor_input </ci>
+              <apply>
+                <power/>
+                <ci> protein_repressor_input </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
               <ci> dna_part_Promoter_forward_part_UTR1_forward_part_A_forward_part_t16_forward_ </ci>
             </apply>
           </math>
@@ -75,10 +79,10 @@
           <PropensityType> k=ku__one_step_cooperative_binding type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="protein_repressor_input" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_repressor_input" stoichiometry="2" constant="false"/>
           <speciesReference species="dna_part_Promoter_forward_part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -86,7 +90,7 @@
             <apply>
               <times/>
               <ci> ku__one_step_cooperative_binding </ci>
-              <ci> ordered_polymer_complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>
@@ -96,10 +100,10 @@
           <PropensityType> k=ktx__simple_transcription type=massaction</PropensityType>
         </annotation>
         <listOfReactants>
-          <speciesReference species="ordered_polymer_complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="ordered_polymer_complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
+          <speciesReference species="ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
           <speciesReference species="rna_part_UTR1_forward_part_A_forward_part_t16_forward_" stoichiometry="1" constant="false"/>
         </listOfProducts>
         <kineticLaw>
@@ -107,7 +111,7 @@
             <apply>
               <times/>
               <ci> ktx__simple_transcription </ci>
-              <ci> ordered_polymer_complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward_ </ci>
+              <ci> ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_ </ci>
             </apply>
           </math>
         </kineticLaw>

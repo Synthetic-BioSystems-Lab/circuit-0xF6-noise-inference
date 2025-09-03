@@ -23,7 +23,7 @@ component_parameters = {
     #Defalt Promoter Binding Parameters. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'kb'):100, 
     ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'ku'):10, 
-    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):1, 
+    ParameterKey(mechanism = 'one_step_cooperative_binding', part_id = None, name = 'cooperativity'):2, 
     
     #Default Promoter Transcription. Note the part_id = [promoter_name]_[regulator_name]
     ParameterKey(mechanism = 'simple_transcription', part_id = None, name = "ktx"): 0.00001,
@@ -84,11 +84,11 @@ sim = GCSim(CRN)
 #Plotting
 
 timepoints = np.linspace(0, 6000, 6000)
-x_lst = np.linspace(0.001, 100, 1000)
+x_lst = np.linspace(0.01, 1000, 1000)
 
-# for i in [0, 10]:
-#     x0 = x0 = {construct_0.get_species():1, 'protein_repressor_input':i}
-#     sim.basicsim(x0, timepoints, ['protein_repressor_input', 'protein_A_degtagged'])
+for i in [0, 10]:
+    x0 = {construct_0.get_species():1, 'protein_repressor_input':i}
+    sim.basicsim(x0, timepoints, ['protein_repressor_input', 'protein_A_degtagged'])
 
 x0 = {construct_0.get_species():1}
 

@@ -1,5 +1,5 @@
 Species(N = 5) = {
-protein[repressor(input)] (@ 0),  rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]] (@ 0),  dna[part[Promoter-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[Promoter]:protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] (@ 0),  protein[A(degtagged)] (@ 0),  
+protein[repressor(input)] (@ 0),  rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]] (@ 0),  dna[part[Promoter-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[Promoter]:2x_protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] (@ 0),  protein[A(degtagged)] (@ 0),  
 }
 
 Reactions (6) = [
@@ -9,9 +9,9 @@ Reactions (6) = [
   found_key=(mech=simple_transcription, partid=Promoter_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=Promoter_leak, name=ktx).
 
-1. protein[repressor(input)]+dna[part[Promoter-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[Promoter]:protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]]
- Kf=k_forward * protein_repressor_input * dna_part_Promoter_forward_part_UTR1_forward_part_A_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward_
+1. 2protein[repressor(input)]+dna[part[Promoter-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[Promoter]:2x_protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]]
+ Kf=k_forward * protein_repressor_input^2 * dna_part_Promoter_forward_part_UTR1_forward_part_A_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_
   k_forward=100
   found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=Promoter_repressor, name=kb).
@@ -19,8 +19,8 @@ Reactions (6) = [
   found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=Promoter_repressor, name=ku).
 
-2. ordered_polymer[complex[part[Promoter]:protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] --> ordered_polymer[complex[part[Promoter]:protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_Promoter_protein_repressor_input_forward__part_UTR1_forward_part_A_forward_part_t16_forward_
+2. ordered_polymer[complex[part[Promoter]:2x_protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] --> ordered_polymer[complex[part[Promoter]:2x_protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_
   k_forward=1e-05
   found_key=(mech=simple_transcription, partid=None, name=ktx).
   search_key=(mech=simple_transcription, partid=Promoter_repressor, name=ktx).
