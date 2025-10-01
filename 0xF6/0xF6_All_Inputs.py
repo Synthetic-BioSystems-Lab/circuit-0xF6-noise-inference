@@ -119,8 +119,6 @@ Ara = Species('Ara',  material_type='protein', attributes=['input']) #Input C
 AraC = Species('AraC',  material_type='protein', attributes=['input'])
 AraAraC = ChemicalComplex([Ara, Ara, AraC, AraC], parameters = complex_parameters)
 
-protease = Species('protease')
-
 #DNA parts
 
 rbs = RBS('UTR1')
@@ -190,10 +188,6 @@ dilution_mechanism = Dilution(filter_dict = {"degtagged":True}, default_on = Fal
 
 global_mechanisms = {"dilution":dilution_mechanism}
 
-# degredation_mechanism = Deg_Tagged_Degredation(protease)
-
-# global_mechanisms = {"degredation":degredation_mechanism}
-
 M = TxTlExtract(name="txtl", parameters = parameters, global_mechanisms = global_mechanisms,
                       components=[PhlF_construct, SrpR_construct, BetI_construct, AmeR_construct, 
                                   HlyIIR_construct, AmtR_construct, YFP_construct, IPTG_LacI, 
@@ -214,13 +208,13 @@ protein_lst = ['protein_PhlF_degtagged',  'protein_YFP_degtagged',
 #Plotting
 for a in [0]:
     for b in [0]:
-        for c in [0, 100]:
+        for c in [0, 80]:
 
-            x0 = {PhlF_construct.get_species():3, SrpR_construct.get_species():3, 
-                  BetI_construct.get_species():3, AmeR_construct.get_species():3, 
-                  HlyIIR_construct.get_species():3, YFP_construct.get_species():3, 
-                  AmtR_construct.get_species():3, Ara:c, AraC:c,
-                  IPTG:a, LacI:100, aTc:b, TetR:100, "protein_RNAP":15, 
+            x0 = {PhlF_construct.get_species():1, SrpR_construct.get_species():1, 
+                  BetI_construct.get_species():1, AmeR_construct.get_species():1, 
+                  HlyIIR_construct.get_species():1, YFP_construct.get_species():1, 
+                  AmtR_construct.get_species():1, Ara:c, AraC:c,
+                  IPTG:a, LacI:50, aTc:b, TetR:50, "protein_RNAP":15, 
                   "protein_Ribo":150., 'protein_RNAase':45}
             timepoints = np.linspace(0, 3000, 3000)
             R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}, Ara = {c}')

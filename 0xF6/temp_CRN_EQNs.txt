@@ -1,5 +1,5 @@
 Species(N = 55) = {
-complex[2x_protein[TetR]:2x_protein[aTc]] (@ 0),  complex[2x_protein[IPTG]:2x_protein[LacI]] (@ 0),  complex[2x_protein[AraC]:2x_protein[Ara]] (@ 0),  rna[part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[HlyIIR-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]] (@ 0),  rna[part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  dna[part[P_Tet-forward]:part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]] (@ 0),  dna[part[P_Tac-forward]:part[UTR1-forward]:part[HlyIIR-forward]:part[t16-forward]] (@ 0),  dna[part[P_Tac-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  dna[part[P_BAD-forward]:part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]] (@ 0),  rna[part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  rna[part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[UTR1-forward]:part[HlyIIR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[4x_complex[2x_protein[AraC]:2x_protein[Ara]]:part[P_BAD]-forward]:part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]] (@ 0),  protein[aTc(input)] (@ 0),  protein[YFP(degtagged)] (@ 0),  protein[TetR(input)] (@ 0),  protein[SrpR_degtagged] (@ 0),  protein[SrpR(degtagged)] (@ 0),  protein[PhlF_degtagged] (@ 0),  protein[PhlF(degtagged)] (@ 0),  protein[LacI(input)] (@ 0),  protein[IPTG(input)] (@ 0),  protein[HlyIIR_degtagged] (@ 0),  protein[HlyIIR(degtagged)] (@ 0),  protein[BetI_degtagged] (@ 0),  protein[BetI(degtagged)] (@ 0),  protein[AraC(input)] (@ 0),  protein[Ara(input)] (@ 0),  protein[AmtR_degtagged] (@ 0),  protein[AmtR(degtagged)] (@ 0),  protein[AmeR_degtagged] (@ 0),  protein[AmeR(degtagged)] (@ 0),  
+complex[2x_protein[TetR]:2x_protein[aTc]] (@ 0),  complex[2x_protein[IPTG]:2x_protein[LacI]] (@ 0),  complex[2x_protein[AraC]:2x_protein[Ara]] (@ 0),  rna[part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[HlyIIR-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]] (@ 0),  rna[part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]] (@ 0),  rna[part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  dna[part[P_Tet-forward]:part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]] (@ 0),  dna[part[P_Tac-forward]:part[UTR1-forward]:part[HlyIIR-forward]:part[t16-forward]] (@ 0),  dna[part[P_Tac-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  dna[part[P_BAD-forward]:part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]] (@ 0),  rna[part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  rna[part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[UTR1-forward]:part[HlyIIR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[4x_complex[2x_protein[AraC]:2x_protein[Ara]]:part[P_BAD]-forward]:part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]] (@ 0),  protein[aTc(input)] (@ 0),  protein[YFP(degtagged)] (@ 0),  protein[TetR(input)] (@ 0),  protein[SrpR_degtagged] (@ 0),  protein[SrpR(degtagged)] (@ 0),  protein[PhlF_degtagged] (@ 0),  protein[PhlF(degtagged)] (@ 0),  protein[LacI(input)] (@ 0),  protein[IPTG(input)] (@ 0),  protein[HlyIIR_degtagged] (@ 0),  protein[HlyIIR(degtagged)] (@ 0),  protein[BetI_degtagged] (@ 0),  protein[BetI(degtagged)] (@ 0),  protein[AraC(input)] (@ 0),  protein[Ara(input)] (@ 0),  protein[AmtR_degtagged] (@ 0),  protein[AmtR(degtagged)] (@ 0),  protein[AmeR_degtagged] (@ 0),  protein[AmeR(degtagged)] (@ 0),  
 }
 
 Reactions (89) = [
@@ -33,92 +33,92 @@ Reactions (89) = [
   found_key=(mech=None, partid=None, name=ku).
   search_key=(mech=one_step_binding, partid=protein_AraC_input_2x_protein_Ara_input_2x, name=ku).
 
-3. ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=0.05
+3. ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=0.044
   found_key=(mech=simple_transcription, partid=P_BetI_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_BetI_leak, name=ktx).
 
-4. 4protein[BetI_degtagged]+ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * protein_BetI_degtagged^4 * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+4. 2protein[BetI_degtagged]+ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * protein_BetI_degtagged^2 * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=100.29
+  found_key=(mech=one_step_cooperative_binding, partid=P_BetI_BetI_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_BetI_BetI_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=6.89
+  found_key=(mech=one_step_cooperative_binding, partid=P_BetI_BetI_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_BetI_BetI_degtagged, name=ku).
 
-5. ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+5. ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=0.00083
+  found_key=(mech=simple_transcription, partid=P_BetI_BetI_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_BetI_BetI_degtagged, name=ktx).
 
-6. ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=0.05
+6. ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=0.025
   found_key=(mech=simple_transcription, partid=P_SrpR_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_SrpR_leak, name=ktx).
 
-7. 4protein[SrpR_degtagged]+ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * protein_SrpR_degtagged^4 * ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+7. protein[SrpR_degtagged]+ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * protein_SrpR_degtagged * ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=101.12
+  found_key=(mech=one_step_cooperative_binding, partid=P_SrpR_SrpR_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_SrpR_SrpR_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=0.25
+  found_key=(mech=one_step_cooperative_binding, partid=P_SrpR_SrpR_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_SrpR_SrpR_degtagged, name=ku).
 
-8. ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+8. ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_forward__complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=6.75e-05
+  found_key=(mech=simple_transcription, partid=P_SrpR_SrpR_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_SrpR_SrpR_degtagged, name=ktx).
 
 9. dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
  Kf=k_forward * dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=0.05
+  k_forward=0.025
   found_key=(mech=simple_transcription, partid=P_SrpR_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_SrpR_leak, name=ktx).
 
-10. 4protein[SrpR_degtagged]+dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * protein_SrpR_degtagged^4 * dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+10. protein[SrpR_degtagged]+dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * protein_SrpR_degtagged * dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=101.12
+  found_key=(mech=one_step_cooperative_binding, partid=P_SrpR_SrpR_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_SrpR_SrpR_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=0.25
+  found_key=(mech=one_step_cooperative_binding, partid=P_SrpR_SrpR_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_SrpR_SrpR_degtagged, name=ku).
 
-11. ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_SrpR]:4x_protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_4x_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+11. ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_SrpR]:protein[SrpR_degtagged]-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_SrpR_protein_SrpR_degtagged_forward__part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=6.75e-05
+  found_key=(mech=simple_transcription, partid=P_SrpR_SrpR_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_SrpR_SrpR_degtagged, name=ktx).
 
 12. dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
  Kf=k_forward * dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=0.05
+  k_forward=0.044
   found_key=(mech=simple_transcription, partid=P_BetI_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_BetI_leak, name=ktx).
 
-13. 4protein[BetI_degtagged]+dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] <--> ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * protein_BetI_degtagged^4 * dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+13. 2protein[BetI_degtagged]+dna[part[P_SrpR-forward]:part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] <--> ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * protein_BetI_degtagged^2 * dna_part_P_SrpR_forward_part_P_BetI_forward_part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=100.29
+  found_key=(mech=one_step_cooperative_binding, partid=P_BetI_BetI_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_BetI_BetI_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=6.89
+  found_key=(mech=one_step_cooperative_binding, partid=P_BetI_BetI_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_BetI_BetI_degtagged, name=ku).
 
-14. ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:4x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_4x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+14. ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> ordered_polymer[part[P_SrpR-forward]:complex[part[P_BetI]:2x_protein[BetI_degtagged]-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_SrpR_forward_complex_part_P_BetI_protein_BetI_degtagged_2x_forward__part_UTR1_forward_part_PhlF_forward_part_t16_forward_
+  k_forward=0.00083
+  found_key=(mech=simple_transcription, partid=P_BetI_BetI_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_BetI_BetI_degtagged, name=ktx).
 
 15. ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]
@@ -139,7 +139,7 @@ Reactions (89) = [
 
 17. ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]
  Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_
-  k_forward=1e-30
+  k_forward=1e-15
   found_key=(mech=simple_transcription, partid=None, name=ktx).
   search_key=(mech=simple_transcription, partid=P_Tet_TetR, name=ktx).
 
@@ -161,7 +161,7 @@ Reactions (89) = [
 
 20. ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]
  Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_
-  k_forward=1e-30
+  k_forward=1e-15
   found_key=(mech=simple_transcription, partid=None, name=ktx).
   search_key=(mech=simple_transcription, partid=P_Tac_LacI, name=ktx).
 
@@ -183,7 +183,7 @@ Reactions (89) = [
 
 23. ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]+rna[part[P_Tet-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]
  Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_P_Tet_forward_part_UTR1_forward_part_SrpR_forward_part_t16_forward_
-  k_forward=1e-30
+  k_forward=1e-15
   found_key=(mech=simple_transcription, partid=None, name=ktx).
   search_key=(mech=simple_transcription, partid=P_Tac_LacI, name=ktx).
 
@@ -205,96 +205,96 @@ Reactions (89) = [
 
 26. ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]] --> ordered_polymer[part[P_Tac-forward]:complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[SrpR-forward]:part[t16-forward]]
  Kf=k_forward * ordered_polymer_part_P_Tac_forward_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_SrpR_forward_part_t16_forward_
-  k_forward=1e-30
+  k_forward=1e-15
   found_key=(mech=simple_transcription, partid=None, name=ktx).
   search_key=(mech=simple_transcription, partid=P_Tet_TetR, name=ktx).
 
-27. ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=0.05
+27. ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=0.039
   found_key=(mech=simple_transcription, partid=P_AmeR_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_AmeR_leak, name=ktx).
 
-28. 4protein[AmeR_degtagged]+ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * protein_AmeR_degtagged^4 * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+28. protein[AmeR_degtagged]+ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * protein_AmeR_degtagged * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=100.75
+  found_key=(mech=one_step_cooperative_binding, partid=P_AmeR_AmeR_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_AmeR_AmeR_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=2.5
+  found_key=(mech=one_step_cooperative_binding, partid=P_AmeR_AmeR_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_AmeR_AmeR_degtagged, name=ku).
 
-29. ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+29. ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=0.0023
+  found_key=(mech=simple_transcription, partid=P_AmeR_AmeR_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_AmeR_AmeR_degtagged, name=ktx).
 
-30. ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=0.05
+30. ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=0.03
   found_key=(mech=simple_transcription, partid=P_HlyIIR_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_HlyIIR_leak, name=ktx).
 
-31. 4protein[HlyIIR_degtagged]+ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * protein_HlyIIR_degtagged^4 * ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+31. 2protein[HlyIIR_degtagged]+ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * protein_HlyIIR_degtagged^2 * ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=102.43
+  found_key=(mech=one_step_cooperative_binding, partid=P_HlyIIR_HlyIIR_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_HlyIIR_HlyIIR_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=0.53
+  found_key=(mech=one_step_cooperative_binding, partid=P_HlyIIR_HlyIIR_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_HlyIIR_HlyIIR_degtagged, name=ku).
 
-32. ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+32. ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__complex_part_P_AmeR_protein_AmeR_degtagged_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=0.00081
+  found_key=(mech=simple_transcription, partid=P_HlyIIR_HlyIIR_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_HlyIIR_HlyIIR_degtagged, name=ktx).
 
 33. dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
  Kf=k_forward * dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=0.05
+  k_forward=0.03
   found_key=(mech=simple_transcription, partid=P_HlyIIR_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_HlyIIR_leak, name=ktx).
 
-34. 4protein[HlyIIR_degtagged]+dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * protein_HlyIIR_degtagged^4 * dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+34. 2protein[HlyIIR_degtagged]+dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * protein_HlyIIR_degtagged^2 * dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=102.43
+  found_key=(mech=one_step_cooperative_binding, partid=P_HlyIIR_HlyIIR_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_HlyIIR_HlyIIR_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=0.53
+  found_key=(mech=one_step_cooperative_binding, partid=P_HlyIIR_HlyIIR_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_HlyIIR_HlyIIR_degtagged, name=ku).
 
-35. ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_HlyIIR]:4x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_4x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+35. ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_HlyIIR]:2x_protein[HlyIIR_degtagged]-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_HlyIIR_protein_HlyIIR_degtagged_2x_forward__part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=0.00081
+  found_key=(mech=simple_transcription, partid=P_HlyIIR_HlyIIR_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_HlyIIR_HlyIIR_degtagged, name=ktx).
 
 36. dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
  Kf=k_forward * dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=0.05
+  k_forward=0.039
   found_key=(mech=simple_transcription, partid=P_AmeR_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_AmeR_leak, name=ktx).
 
-37. 4protein[AmeR_degtagged]+dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] <--> ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * protein_AmeR_degtagged^4 * dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+37. protein[AmeR_degtagged]+dna[part[P_HlyIIR-forward]:part[P_AmeR-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] <--> ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * protein_AmeR_degtagged * dna_part_P_HlyIIR_forward_part_P_AmeR_forward_part_UTR1_forward_part_BetI_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=100.75
+  found_key=(mech=one_step_cooperative_binding, partid=P_AmeR_AmeR_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_AmeR_AmeR_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=2.5
+  found_key=(mech=one_step_cooperative_binding, partid=P_AmeR_AmeR_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_AmeR_AmeR_degtagged, name=ku).
 
-38. ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:4x_protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_4x_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+38. ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]] --> ordered_polymer[part[P_HlyIIR-forward]:complex[part[P_AmeR]:protein[AmeR_degtagged]-forward]:part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[BetI-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_HlyIIR_forward_complex_part_P_AmeR_protein_AmeR_degtagged_forward__part_UTR1_forward_part_BetI_forward_part_t16_forward_
+  k_forward=0.0023
+  found_key=(mech=simple_transcription, partid=P_AmeR_AmeR_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_AmeR_AmeR_degtagged, name=ktx).
 
 39. dna[part[P_Tet-forward]:part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]] --> dna[part[P_Tet-forward]:part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]]
@@ -315,7 +315,7 @@ Reactions (89) = [
 
 41. ordered_polymer[complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tet]:4x_protein[TetR]-forward]:part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[AmeR-forward]:part[t16-forward]]
  Kf=k_forward * ordered_polymer_complex_part_P_Tet_protein_TetR_input_4x_forward__part_UTR1_forward_part_AmeR_forward_part_t16_forward_
-  k_forward=1e-30
+  k_forward=1e-15
   found_key=(mech=simple_transcription, partid=None, name=ktx).
   search_key=(mech=simple_transcription, partid=P_Tet_TetR, name=ktx).
 
@@ -337,14 +337,14 @@ Reactions (89) = [
 
 44. ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[UTR1-forward]:part[HlyIIR-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[UTR1-forward]:part[HlyIIR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[HlyIIR-forward]:part[t16-forward]]
  Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_UTR1_forward_part_HlyIIR_forward_part_t16_forward_
-  k_forward=1e-30
+  k_forward=1e-15
   found_key=(mech=simple_transcription, partid=None, name=ktx).
   search_key=(mech=simple_transcription, partid=P_Tac_LacI, name=ktx).
 
 45. dna[part[P_BAD-forward]:part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]] --> dna[part[P_BAD-forward]:part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]]
  Kf=k_forward * dna_part_P_BAD_forward_part_UTR1_forward_part_AmtR_forward_part_t16_forward_
   k_forward=1e-15
-  found_key=(mech=simple_transcription, partid=P_BAD_leak, name=ktx).
+  found_key=(mech=simple_transcription, partid=None, name=ktx).
   search_key=(mech=simple_transcription, partid=P_BAD_leak, name=ktx).
 
 46. 4complex[2x_protein[AraC]:2x_protein[Ara]]+dna[part[P_BAD-forward]:part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]] <--> ordered_polymer[complex[4x_complex[2x_protein[AraC]:2x_protein[Ara]]:part[P_BAD]-forward]:part[UTR1-forward]:part[AmtR-forward]:part[t16-forward]]
@@ -363,48 +363,48 @@ Reactions (89) = [
   found_key=(mech=simple_transcription, partid=P_BAD_protein_AraC_input_2x_protein_Ara_input_2x, name=ktx).
   search_key=(mech=simple_transcription, partid=P_BAD_protein_AraC_input_2x_protein_Ara_input_2x, name=ktx).
 
-48. ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=0.05
+48. ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_3x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
+  k_forward=0.037
   found_key=(mech=simple_transcription, partid=P_AmtR_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_AmtR_leak, name=ktx).
 
-49. 4protein[AmtR_degtagged]+ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * protein_AmtR_degtagged^4 * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+49. protein[AmtR_degtagged]+ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * protein_AmtR_degtagged * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_3x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_3x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
+  k_forward=100.93
+  found_key=(mech=one_step_cooperative_binding, partid=P_AmtR_AmtR_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_AmtR_AmtR_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=0.75
+  found_key=(mech=one_step_cooperative_binding, partid=P_AmtR_AmtR_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_AmtR_AmtR_degtagged, name=ku).
 
-50. ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+50. ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_3x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
+  k_forward=0.00079
+  found_key=(mech=simple_transcription, partid=P_AmtR_AmtR_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_AmtR_AmtR_degtagged, name=ktx).
 
-51. ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
+51. ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
   k_forward=0.05
   found_key=(mech=simple_transcription, partid=P_PhlF_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_PhlF_leak, name=ktx).
 
-52. 4protein[PhlF_degtagged]+ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * protein_PhlF_degtagged^4 * ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+52. 3protein[PhlF_degtagged]+ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * protein_PhlF_degtagged^3 * ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_3x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
+  k_forward=91.74
+  found_key=(mech=one_step_cooperative_binding, partid=P_PhlF_PhlF_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_PhlF_PhlF_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=0.0001
+  found_key=(mech=one_step_cooperative_binding, partid=P_PhlF_PhlF_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_PhlF_PhlF_degtagged, name=ku).
 
-53. ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+53. ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_3x_forward__complex_part_P_AmtR_protein_AmtR_degtagged_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
+  k_forward=0.00024
+  found_key=(mech=simple_transcription, partid=P_PhlF_PhlF_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_PhlF_PhlF_degtagged, name=ktx).
 
 54. dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
@@ -413,42 +413,42 @@ Reactions (89) = [
   found_key=(mech=simple_transcription, partid=P_PhlF_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_PhlF_leak, name=ktx).
 
-55. 4protein[PhlF_degtagged]+dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * protein_PhlF_degtagged^4 * dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+55. 3protein[PhlF_degtagged]+dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * protein_PhlF_degtagged^3 * dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_3x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
+  k_forward=91.74
+  found_key=(mech=one_step_cooperative_binding, partid=P_PhlF_PhlF_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_PhlF_PhlF_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=0.0001
+  found_key=(mech=one_step_cooperative_binding, partid=P_PhlF_PhlF_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_PhlF_PhlF_degtagged, name=ku).
 
-56. ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_PhlF]:4x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_4x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+56. ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[complex[part[P_PhlF]:3x_protein[PhlF_degtagged]-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_PhlF_protein_PhlF_degtagged_3x_forward__part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
+  k_forward=0.00024
+  found_key=(mech=simple_transcription, partid=P_PhlF_PhlF_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_PhlF_PhlF_degtagged, name=ktx).
 
 57. dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
  Kf=k_forward * dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=0.05
+  k_forward=0.037
   found_key=(mech=simple_transcription, partid=P_AmtR_leak, name=ktx).
   search_key=(mech=simple_transcription, partid=P_AmtR_leak, name=ktx).
 
-58. 4protein[AmtR_degtagged]+dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] <--> ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * protein_AmtR_degtagged^4 * dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=100
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
+58. protein[AmtR_degtagged]+dna[part[P_PhlF-forward]:part[P_AmtR-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] <--> ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * protein_AmtR_degtagged * dna_part_P_PhlF_forward_part_P_AmtR_forward_part_UTR1_forward_part_YFP_forward_part_t16_forward_
+ Kr=k_reverse * ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
+  k_forward=100.93
+  found_key=(mech=one_step_cooperative_binding, partid=P_AmtR_AmtR_degtagged, name=kb).
   search_key=(mech=one_step_cooperative_binding, partid=P_AmtR_AmtR_degtagged, name=kb).
-  k_reverse=10
-  found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
+  k_reverse=0.75
+  found_key=(mech=one_step_cooperative_binding, partid=P_AmtR_AmtR_degtagged, name=ku).
   search_key=(mech=one_step_cooperative_binding, partid=P_AmtR_AmtR_degtagged, name=ku).
 
-59. ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:4x_protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_4x_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
-  k_forward=1e-30
-  found_key=(mech=simple_transcription, partid=None, name=ktx).
+59. ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]] --> ordered_polymer[part[P_PhlF-forward]:complex[part[P_AmtR]:protein[AmtR_degtagged]-forward]:part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[YFP-forward]:part[t16-forward]]
+ Kf=k_forward * ordered_polymer_part_P_PhlF_forward_complex_part_P_AmtR_protein_AmtR_degtagged_forward__part_UTR1_forward_part_YFP_forward_part_t16_forward_
+  k_forward=0.00079
+  found_key=(mech=simple_transcription, partid=P_AmtR_AmtR_degtagged, name=ktx).
   search_key=(mech=simple_transcription, partid=P_AmtR_AmtR_degtagged, name=ktx).
 
 60. rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]] --> rna[part[P_BetI-forward]:part[UTR1-forward]:part[PhlF-forward]:part[t16-forward]]+protein[PhlF(degtagged)]

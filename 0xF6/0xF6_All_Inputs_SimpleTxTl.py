@@ -58,8 +58,6 @@ Ara = Species('Ara',  material_type='protein', attributes=['input']) #Input C
 AraC = Species('AraC',  material_type='protein', attributes=['input'])
 AraAraC = ChemicalComplex([Ara, Ara, AraC, AraC], parameters = complex_parameters)
 
-# protease = Species('protease')
-
 #DNA parts
 
 rbs = RBS('UTR1')
@@ -163,4 +161,4 @@ for a in [0,80]:
             R = sim.basicsim(x0, timepoints, protein_lst, title = f'IPTG = {a}, aTc = {b}, Ara = {c}')
             print(R['protein_YFP_degtagged'].iloc[-1])
             # R[['time'] + protein_lst].to_excel(f'{a}, {b}, {c}.xlsx', index=False)
-            R.to_excel(f'simulation_data/IPTG_{a}_aTc_{b}_Ara_{c}.xlsx', index=False)
+            # R.to_csv(f'simulation_data/IPTG_{a}_aTc_{b}_Ara_{c}.csv', index=False)

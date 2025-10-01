@@ -61,8 +61,6 @@ Ara = Species('Ara',  material_type='protein', attributes=['input']) #Input C
 AraC = Species('AraC',  material_type='protein', attributes=['input'])
 AraAraC = ChemicalComplex([Ara, Ara, AraC, AraC], parameters = complex_parameters)
 
-protease = Species('protease')
-
 #DNA parts
 
 rbs = RBS('UTR1')
@@ -145,10 +143,6 @@ YFP_construct = DNA_construct([P_PhlF, P_Inv2, rbs, CDS_YFP, t16])
 dilution_mechanism = Dilution(filter_dict = {"degtagged":True}, default_on = False)
 
 global_mechanisms = {"dilution":dilution_mechanism}
-
-# degredation_mechanism = Deg_Tagged_Degredation(protease)
-
-# global_mechanisms = {"degredation":degredation_mechanism}
 
 M = SimpleTxTlExtract(name="txtl", parameters = parameters, global_mechanisms = global_mechanisms,
                       components=[PhlF_construct, SrpR_construct, BetI_construct, AmeR_construct, 
