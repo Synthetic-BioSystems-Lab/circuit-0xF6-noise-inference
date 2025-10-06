@@ -7,7 +7,7 @@ Created on Mon Sep  8 14:49:20 2025
 
 import matplotlib.pyplot as plt
 import pandas as pd
-from EQN_fit import EQN_fit
+from utils import EQN_fit
 from scipy.integrate import solve_ivp
 
 protein_lst = ['AmeR-F1']

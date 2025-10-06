@@ -1,46 +1,56 @@
-Species(N = 5) = {
-protein[repressor(input)] (@ 0),  rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]] (@ 0),  dna[part[Promoter-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] (@ 0),  ordered_polymer[complex[part[Promoter]:2x_protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] (@ 0),  protein[A(degtagged)] (@ 0),  
+Species(N = 7) = {
+complex[2x_protein[IPTG]:2x_protein[LacI]] (@ 0),  rna[part[rbs-forward]:part[YFP-forward]:part[t-forward]] (@ 0),  dna[part[P_Tac-forward]:part[rbs-forward]:part[YFP-forward]:part[t-forward]] (@ 0),  ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[rbs-forward]:part[YFP-forward]:part[t-forward]] (@ 0),  protein[YFP(degtagged)] (@ 0),  protein[LacI(input)] (@ 0),  protein[IPTG(input)] (@ 0),  
 }
 
-Reactions (6) = [
-0. dna[part[Promoter-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] --> dna[part[Promoter-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]]
- Kf=k_forward * dna_part_Promoter_forward_part_UTR1_forward_part_A_forward_part_t16_forward_
-  k_forward=0.05
-  found_key=(mech=simple_transcription, partid=Promoter_leak, name=ktx).
-  search_key=(mech=simple_transcription, partid=Promoter_leak, name=ktx).
+Reactions (7) = [
+0. 2protein[IPTG(input)]+2protein[LacI(input)] <--> complex[2x_protein[IPTG]:2x_protein[LacI]]
+ Kf=k_forward * protein_IPTG_input^2 * protein_LacI_input^2
+ Kr=k_reverse * complex_protein_IPTG_input_2x_protein_LacI_input_2x_
+  k_forward=100
+  found_key=(mech=None, partid=None, name=kb).
+  search_key=(mech=one_step_binding, partid=protein_IPTG_input_2x_protein_LacI_input_2x, name=kb).
+  k_reverse=10
+  found_key=(mech=None, partid=None, name=ku).
+  search_key=(mech=one_step_binding, partid=protein_IPTG_input_2x_protein_LacI_input_2x, name=ku).
 
-1. 2protein[repressor(input)]+dna[part[Promoter-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] <--> ordered_polymer[complex[part[Promoter]:2x_protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]]
- Kf=k_forward * protein_repressor_input^2 * dna_part_Promoter_forward_part_UTR1_forward_part_A_forward_part_t16_forward_
- Kr=k_reverse * ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_
+1. dna[part[P_Tac-forward]:part[rbs-forward]:part[YFP-forward]:part[t-forward]] --> dna[part[P_Tac-forward]:part[rbs-forward]:part[YFP-forward]:part[t-forward]]+rna[part[rbs-forward]:part[YFP-forward]:part[t-forward]]
+ Kf=k_forward * dna_part_P_Tac_forward_part_rbs_forward_part_YFP_forward_part_t_forward_
+  k_forward=0.05
+  found_key=(mech=simple_transcription, partid=P_Tac_leak, name=ktx).
+  search_key=(mech=simple_transcription, partid=P_Tac_leak, name=ktx).
+
+2. 4protein[LacI(input)]+dna[part[P_Tac-forward]:part[rbs-forward]:part[YFP-forward]:part[t-forward]] <--> ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[rbs-forward]:part[YFP-forward]:part[t-forward]]
+ Kf=k_forward * protein_LacI_input^4 * dna_part_P_Tac_forward_part_rbs_forward_part_YFP_forward_part_t_forward_
+ Kr=k_reverse * ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_rbs_forward_part_YFP_forward_part_t_forward_
   k_forward=100
   found_key=(mech=one_step_cooperative_binding, partid=None, name=kb).
-  search_key=(mech=one_step_cooperative_binding, partid=Promoter_repressor, name=kb).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=kb).
   k_reverse=10
   found_key=(mech=one_step_cooperative_binding, partid=None, name=ku).
-  search_key=(mech=one_step_cooperative_binding, partid=Promoter_repressor, name=ku).
+  search_key=(mech=one_step_cooperative_binding, partid=P_Tac_LacI, name=ku).
 
-2. ordered_polymer[complex[part[Promoter]:2x_protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]] --> ordered_polymer[complex[part[Promoter]:2x_protein[repressor]-forward]:part[UTR1-forward]:part[A-forward]:part[t16-forward]]+rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]]
- Kf=k_forward * ordered_polymer_complex_part_Promoter_protein_repressor_input_2x_forward__part_UTR1_forward_part_A_forward_part_t16_forward_
-  k_forward=1e-07
+3. ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[rbs-forward]:part[YFP-forward]:part[t-forward]] --> ordered_polymer[complex[part[P_Tac]:4x_protein[LacI]-forward]:part[rbs-forward]:part[YFP-forward]:part[t-forward]]+rna[part[rbs-forward]:part[YFP-forward]:part[t-forward]]
+ Kf=k_forward * ordered_polymer_complex_part_P_Tac_protein_LacI_input_4x_forward__part_rbs_forward_part_YFP_forward_part_t_forward_
+  k_forward=1e-15
   found_key=(mech=simple_transcription, partid=None, name=ktx).
-  search_key=(mech=simple_transcription, partid=Promoter_repressor, name=ktx).
+  search_key=(mech=simple_transcription, partid=P_Tac_LacI, name=ktx).
 
-3. rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]] --> rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]]+protein[A(degtagged)]
- Kf=k_forward * rna_part_UTR1_forward_part_A_forward_part_t16_forward_
+4. rna[part[rbs-forward]:part[YFP-forward]:part[t-forward]] --> rna[part[rbs-forward]:part[YFP-forward]:part[t-forward]]+protein[YFP(degtagged)]
+ Kf=k_forward * rna_part_rbs_forward_part_YFP_forward_part_t_forward_
   k_forward=0.05
   found_key=(mech=None, partid=None, name=ktl).
-  search_key=(mech=simple_translation, partid=UTR1, name=ktl).
+  search_key=(mech=simple_translation, partid=rbs, name=ktl).
 
-4. protein[A(degtagged)] --> 
- Kf=k_forward * protein_A_degtagged
+5. protein[YFP(degtagged)] --> 
+ Kf=k_forward * protein_YFP_degtagged
   k_forward=0.0075
   found_key=(mech=None, partid=None, name=kdil).
-  search_key=(mech=global_degredation_via_dilution, partid=protein_A_degtagged, name=kdil).
+  search_key=(mech=global_degredation_via_dilution, partid=protein_YFP_degtagged, name=kdil).
 
-5. rna[part[UTR1-forward]:part[A-forward]:part[t16-forward]] --> 
- Kf=k_forward * rna_part_UTR1_forward_part_A_forward_part_t16_forward_
+6. rna[part[rbs-forward]:part[YFP-forward]:part[t-forward]] --> 
+ Kf=k_forward * rna_part_rbs_forward_part_YFP_forward_part_t_forward_
   k_forward=0.0075
   found_key=(mech=None, partid=None, name=kdil).
-  search_key=(mech=rna_degredation, partid=rna_part_UTR1_forward_part_A_forward_part_t16_forward_, name=kdil).
+  search_key=(mech=rna_degredation, partid=rna_part_rbs_forward_part_YFP_forward_part_t_forward_, name=kdil).
 
 ]
